@@ -1,0 +1,193 @@
+// === TABLE === //
+.table {
+	// .table__standing
+	&__standing {
+	}
+
+	// .table__wrapper
+	&__wrapper {
+		max-width: 1570px;
+		position: relative;
+	}
+
+	// .table__title
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 11;
+		width: 270px;
+		height: 60px;
+		color: $white;
+		font-weight: 500;
+		text-transform: uppercase;
+		background-color: $color-zenit;
+		border-right: 1px solid $bgColor_2;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		column-gap: 5px;
+		padding: 10px;
+		@media (max-width: 600px) {
+			width: 60px;
+		}
+	}
+
+	// .table__box
+	&__box {
+	}
+
+	// .table__header
+	&__header {
+	}
+
+	// .table__fix-col
+	&__fix-col {
+	}
+	&__fix-col tr {
+	}
+
+	// .table__body
+	&__body tr {
+		background-color: $white;
+		transition: all 0.125s ease-in-out;
+		border-right: 1px solid $bgColor_2;
+
+		&:nth-child(2n-1) {
+			background-color: $bgColor_2;
+		}
+
+		&:hover {
+			background-color: rgba(133, 194, 241, 0.3);
+		}
+	}
+	// .table__link
+	&__link {
+	}
+
+	// .table__img
+	&__img {
+	}
+
+	// .table__text
+	&__text {
+	}
+}
+// === THEAD CELL === //
+.thead-cell {
+	width: 270px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	text-align: start;
+	column-gap: 5px;
+	@media (max-width: 600px) {
+		width: 60px;
+	}
+	&__img {
+		width: 40px;
+		height: 40px;
+	}
+	&__text {
+		line-height: 40px;
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
+
+	// .thead-cell__link
+	&__link {
+	}
+}
+// === THEAD ITEM === //
+.thead-item {
+	min-width: 130px;
+	height: 60px;
+	box-sizing: border-box;
+}
+
+// === TABLE SCROLL === //
+.table-scroll {
+	color: $mainColor;
+	width: 100%;
+	height: auto;
+
+	@media (max-width: 1600px) {
+		overflow-x: scroll;
+	}
+	@media (max-width: 600px) {
+		height: 300px;
+		overflow: scroll;
+	}
+
+	table {
+		position: relative;
+		border-collapse: collapse;
+		table-layout: fixed;
+		text-align: center;
+	}
+	.thead-col {
+		position: absolute;
+		margin-top: 60px;
+		z-index: 9;
+	}
+
+	.thead-col tr {
+		left: 0;
+		border-right: 1px solid $color-zenit;
+		border-left: 1px solid $bgColor_2;
+
+		background-color: $white;
+		transition: all 0.125s ease-in-out;
+		&:nth-child(2n-1) {
+			background-color: $bgColor_2;
+		}
+	}
+
+	.thead-row {
+		position: absolute;
+		margin-left: 270px;
+		z-index: 10;
+		background-color: $color-zenit;
+		@media (max-width: 600px) {
+			margin-left: 60px;
+		}
+	}
+	.thead-row tr {
+	}
+	.thead-row th {
+		color: $white;
+		font-size: 16px;
+		text-transform: uppercase;
+		padding: 18px 12px;
+	}
+
+	tbody {
+		display: block;
+		margin-left: 270px;
+		margin-top: 60px;
+		@media (max-width: 600px) {
+			margin-left: 60px;
+		}
+	}
+	//th,
+	td {
+		min-width: 130px;
+
+		line-height: 40px;
+		box-sizing: border-box;
+		padding: 12px;
+	}
+}
+
+// === BASIC TABLE OPTIONS === //
+
+td,
+th {
+	padding: 12px;
+}
+th {
+	font-weight: 500;
+	color: $mainColor;
+	white-space: nowrap;
+}

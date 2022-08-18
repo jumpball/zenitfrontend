@@ -1,0 +1,114 @@
+// === TEAM ROSTER === //
+.team-roster {
+	// .team-roster__section
+	&__section {
+	}
+
+	// .team-roster__tabs
+	&__tabs {
+	}
+
+	// .team-roster__nav
+	&__nav {
+	}
+
+	// .team-roster__tab-body
+	&__tab-body {
+		display: block;
+
+		//grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		//gap: 20px;
+		//margin: 0 auto;
+	}
+
+	// .team-roster__tab-item
+	&__tab-item {
+		//min-width: 290px;
+	}
+}
+
+// === TEAM SLIDER === //
+
+.team-slider {
+	position: relative;
+	// .team-slider__wrp
+	&__wrapper {
+	}
+
+	// .team-slider__bg-logo
+	&__bg-logo {
+	}
+
+	// .team-slider__item
+	&__item {
+	}
+
+	// .team-slider__pagination
+	.swiper-pagination {
+		position: relative;
+		margin-top: rem(30);
+	}
+
+	.swiper-pagination-bullet {
+		width: rem(20);
+		height: rem(20);
+		line-height: rem(20);
+		font-size: rem(30);
+		background-color: $white;
+		border: rem(1) solid $color-zenit;
+	}
+
+	// .team-slider__navigation
+	&__navigation {
+		width: 100%;
+		position: absolute;
+		top: calc(50% - 35px);
+		left: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 2;
+	}
+	&__nav-prev {
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(2);
+			}
+		}
+	}
+	&__nav-next {
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(2);
+			}
+		}
+	}
+}
+
+// === TAB to SLIDER === //
+.b-tab {
+	display: none;
+	//background-color: $white;
+	overflow: hidden;
+}
+
+.b-tab.active {
+	display: block;
+	height: auto;
+}
+
+.b-nav-tab {
+	display: inline-block;
+}
+
+.b-nav-tab.active {
+}

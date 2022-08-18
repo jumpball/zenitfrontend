@@ -1,0 +1,163 @@
+// === PLAYER CARD === //
+.player-card {
+	// .player-card__body
+	&__body {
+		position: relative;
+		min-width: 270px;
+		width: 100%;
+		height: 480px;
+		border-radius: 5px;
+		overflow: hidden;
+		background: $white;
+		border: 1px solid $color-zenit;
+		//box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $shadow-1;
+			}
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 0;
+			background: $mainColor;
+			//background: linear-gradient(to bottom, $color-zenit, $white);
+			transition: all 0.3s ease;
+		}
+		&:hover {
+			/*%% Card on hover %%*/
+			&:before {
+				height: 60px;
+			}
+			.player-card__social {
+				margin-top: 40px;
+			}
+			.player-card__photo {
+				width: 205px;
+				height: 250px;
+				//margin-top: 50px;
+				//box-shadow: 0px 0px 10px 1px #888;
+				//border: 1px solid $color-zenit;
+				//border-radius: 80px 80px 0px 0px;
+			}
+			.player-card__number {
+				color: $white;
+			}
+			.player-card__mini-logo {
+				display: none;
+			}
+			.player-card__title {
+				//color: $color-zenit;
+				//color: $mainColor;
+				//transition: all 0.3s ease;
+			}
+		}
+	}
+
+	// .player-card__mini-logo
+	&__mini-logo {
+		width: 85px;
+		height: 40px;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	// .player-card__number
+	&__number {
+		font-size: 26px;
+		font-weight: 900;
+		text-align: center;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: $color-zenit;
+	}
+
+	// .player-card__social
+	&__social {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		height: 0;
+		margin-top: -50px;
+		text-align: center;
+		transition: margin-top 0.5s ease;
+
+		a {
+			//padding: 23px 70px;
+		}
+	}
+
+	// .player-card__logo
+	&__logo {
+		width: 85px;
+		height: 40px;
+		position: absolute;
+		top: -30px;
+		left: 10px;
+	}
+	&__logo img {
+	}
+
+	// .player-card__photo
+	&__photo {
+		position: relative;
+		left: 50%;
+		top: 15%;
+		transform: translateX(-50%);
+		width: 200px;
+		height: 240px;
+		overflow: hidden;
+		transition: all 0.5s ease;
+		//border-radius: 50%;
+		border-radius: 5px;
+		background: $white;
+	}
+	&__photo img {
+		top: 0;
+		width: 100%;
+		height: 100%;
+		//border-radius: 50%;
+		border-radius: 5px;
+		object-position: top;
+	}
+
+	// .player-card__content
+	&__content {
+		margin-top: 80px;
+		text-align: center;
+		padding: 0 30px;
+		color: $black_l;
+		transition: margin-top 0.5s ease;
+		span {
+			font-size: 12px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			padding-top: 2px;
+			line-height: 24px;
+			color: $color-zenit;
+			border-top: 1px solid $color-zenit;
+		}
+		p {
+			margin: 4px 0;
+			font-size: 12px;
+			line-height: 14px;
+			color: $black_l;
+		}
+	}
+
+	// .player-card__title
+	&__title {
+		margin-bottom: 0;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+		font-weight: 900;
+		letter-spacing: 1px;
+	}
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div data-sticky class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+
+
+			<section class="head-slider__section section-offset">
+				<!-- <div class="section__container">
+					
+				</div> -->
+				@@include('html/_head-slider.htm',{})
+			</section>
+
+
+			<section class="calendar-slider__section section-offset diagonal-box bg-one">
+				<div class="section__container content__box">
+					<h2 class="section-title-h2w element-animation">Календарь</h2>
+
+					@@include('html/_calendar-slider.htm',{})
+				</div>
+			</section>
+
+			<section class="banner__section section-offset">
+				<div class="section__container">
+					@@include('html/_banner-slider.htm',{})
+				</div>
+			</section>
+
+
+
+			<section class="publication-selector__section">
+				<div class="section__container">
+					<h2 class="section-title-h2b publication-selector__title element-animation">Новости</h2>
+					@@include('html/_publication-selector.htm',{})
+				</div>
+			</section>
+
+			<section class="video-slider__section section-offset diagonal-box bg-one">
+				<div class="section__container video-slider__box content__box">
+					<h2 class="section-title-h2w video-slider__title element-animation">медиа</h2>
+					@@include('html/_video-tabs.htm',{})
+				</div>
+			</section>
+
+
+			<section class="leaders-slider__section section-offset">
+				<div class="section__container">
+					<h2 class="section-title-h2b leaders-slider__title element-animation">Лидеры</h2>
+					<div class="leaders-slider__row">
+						<div class="leaders-slider__box">
+							@@include('html/_blog-slider.htm',{})
+						</div>
+						<div class="banner-slider-vert__box">
+							@@include('html/_banner-slider-vert.htm',{})
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="team-roster__section section-offset diagonal-box bg-one">
+				<div class="section__container content__box">
+					<h2 class="section-title-h2w element-animation">Команды</h2>
+					<div data-tabs="960" data-tabs-animate="1000" class="tabs tab__block team-roster__tabs">
+						<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
+							<button type="button" class="tab__title-w _tab-active">
+								<a href="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w active">
+									Зенит
+								</a>
+							</button>
+							<button type="button" class="tab__title-w">
+								<a href="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w">
+									Зенит-2
+								</a>
+							</button>
+							<button type="button" class="tab__title-w">
+								<a href="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w">
+									Зенит-М
+								</a>
+							</button>
+							<button type="button" class="tab__title-w">
+								<a href="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w">
+									Зенит-ДЮБЛ
+								</a>
+							</button>
+
+						</nav>
+						<div data-tabs-body class="tabs__content tab__content">
+							<div id="tab_1" class="tabs__body tab__body team-roster__tab-body b-tab active">
+
+								<!-- <div class="swiper-wrapper">
+															<div class="swiper-slide">111</div>
+															<div class="swiper-slide">222</div>
+															<div class="swiper-slide">333</div>
+															<div class="swiper-slide">444</div>
+															<div class="swiper-slide">555</div>
+														</div>
+													
+														<div class="swiper-pagination"></div> -->
+								@@include('html/_team-slider.htm',{})
+
+							</div>
+							<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">Slide 1</div>
+										<div class="swiper-slide">Slide 2</div>
+										<div class="swiper-slide">Slide 3</div>
+										<div class="swiper-slide">Slide 4</div>
+										<div class="swiper-slide">Slide 5</div>
+									</div>
+									<!-- Add Pagination -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div id="tab_3" class="tabs__body tab__body team-roster__tab-body b-tab">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">Slide 1</div>
+										<div class="swiper-slide">Slide 2</div>
+										<div class="swiper-slide">Slide 3</div>
+										<div class="swiper-slide">Slide 4</div>
+										<div class="swiper-slide">Slide 5</div>
+									</div>
+									<!-- Add Pagination -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div id="tab_4" class="tabs__body tab__body team-roster__tab-body b-tab">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">Slide 1</div>
+										<div class="swiper-slide">Slide 2</div>
+										<div class="swiper-slide">Slide 3</div>
+										<div class="swiper-slide">Slide 4</div>
+										<div class="swiper-slide">Slide 5</div>
+									</div>
+									<!-- Add Pagination -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<section class="table__standing section-offset">
+				<div class="section__container">
+					<h2 class="section-title-h2b element-animation">Турниры</h2>
+					<div data-tabs="960" data-tabs-animate="1000" class="tabs tab__block">
+						<nav data-tabs-titles class="tabs__navigation tab__nav">
+							<button type="button" class="tabs__title tab__title _tab-active">Лига ВТБ</button>
+							<button type="button" class="tabs__title tab__title">Суперлига</button>
+							<button type="button" class="tabs__title tab__title">Молодежка</button>
+							<button type="button" class="tabs__title tab__title">ДЮБЛ</button>
+
+						</nav>
+						<div data-tabs-body class="tabs__content tab__content">
+							<div class="tabs__body tab__body">
+								@@include('html/_table.htm',{})
+							</div>
+							<div class="tabs__body tab__body">
+								Содержимое второго таба
+							</div>
+							<div class="tabs__body tab__body">
+								Содержимое третьего таба
+							</div>
+							<div class="tabs__body tab__body">
+								Содержимое четвертого таба
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

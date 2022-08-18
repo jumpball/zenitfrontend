@@ -1,0 +1,185 @@
+// === TAB ZENIT === //
+
+.tab {
+	// .tab__block
+	&__block {
+	}
+
+	// .tab__nav
+	&__nav {
+		display: flex;
+		gap: rem(20);
+		@media (max-width: rem(960)) {
+			margin-right: rem(30);
+		}
+	}
+
+	// &__title {
+	// 	//width: 150px;
+	// 	line-height: 60px;
+	// 	cursor: pointer;
+	// 	padding: 0px 30px;
+	// 	font-size: 16px;
+	// 	font-weight: 500;
+	// 	text-transform: uppercase;
+	// 	color: $mainColor;
+	// 	white-space: nowrap;
+	// 	@media (max-width: 600px) {
+	// 		width: 100%;
+	// 		border: 1px solid $color-zenit;
+	// 		margin-bottom: 10px;
+	// 	}
+	// }
+	&__title {
+		margin-top: rem(20);
+		display: inline-flex;
+		//width: 100%;
+		background-color: $white;
+		padding: 25px 35px;
+		border-radius: 5px;
+		min-width: 205px;
+		color: $color-zenit;
+		border: rem(1) solid $color-zenit;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(960)) {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__title-w {
+		display: inline-flex;
+		//width: 100%;
+		background-color: $color-zenit;
+		//padding: 25px 35px;
+		border-radius: 5px;
+		min-width: 205px;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(960)) {
+			width: 100%;
+			margin-top: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	// &__title-w {
+	// 	//width: 150px;
+	// 	line-height: 60px;
+	// 	cursor: pointer;
+	// 	//padding: 0px 30px;
+	// 	font-size: 16px;
+	// 	font-weight: 500;
+	// 	text-transform: uppercase;
+	// 	border-radius: rem(3);
+	// 	//color: $mainColor;
+	// 	white-space: nowrap;
+	// 	@media (max-width: 600px) {
+	// 		width: 100%;
+	// 		border: 1px solid $color-zenit;
+	// 		margin-bottom: 10px;
+	// 	}
+	// }
+
+	// &__title-w:hover {
+	// 	background-color: $white;
+	// 	color: $color-zenit;
+	// 	transition: all 0.3s ease 0s;
+	// }
+
+	&__link {
+		display: block;
+		line-height: 60px;
+		padding: 0px 50px;
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $mainColor;
+		//white-space: nowrap;
+		@media (max-width: 960px) {
+			width: 100%;
+			//border: 1px solid $color-zenit;
+			margin-bottom: 10px;
+		}
+	}
+	&__link:hover {
+		background-color: $mainColor;
+		color: $white;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__link-w {
+		//margin-top: rem(20);
+		display: block;
+		//width: 100%;
+		background-color: $color-zenit;
+		padding: 25px 35px;
+		border-radius: 5px;
+		min-width: 205px;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(960)) {
+			width: 100%;
+			//margin-bottom: 10px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__content {
+	}
+
+	// .tab__body
+	&__body {
+		padding: 20px 0px 0px 0px;
+	}
+}
+
+._tab-active {
+	background-color: $color-zenit;
+	color: $white;
+}
+._tab-active a {
+	background-color: $white;
+	color: $color-zenit;
+}

@@ -1,0 +1,53 @@
+.pub-menu-slider {
+	//margin-bottom: rem(30);
+	//z-index: 1;
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		//position: relative;
+		width: auto;
+		//border: rem(1) solid $white;
+		//border-radius: rem(3);
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+	}
+
+	&__nav-prev {
+	}
+
+	&__nav-next {
+	}
+	&__pagination {
+	}
+	.swiper-pagination {
+		position: relative;
+		margin-top: rem(30);
+	}
+
+	.swiper-pagination-bullet {
+		width: rem(20);
+		height: rem(20);
+		line-height: rem(20);
+		font-size: rem(30);
+		background-color: $color-zenit;
+		border: rem(1) solid $white;
+	}
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+		//box-shadow: $shadow-1;
+	}
+	.swiper-slide-active &__slide-label {
+		//opacity: 1;
+	}
+}
