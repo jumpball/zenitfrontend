@@ -144,33 +144,39 @@ body {
 	padding: 50px 0px 0px 0px;
 }
 .section-title-h2b {
-	font-size: 40px;
-	line-height: rem(60);
 	font-weight: 900;
 	color: $mainColor;
 	letter-spacing: rem(2);
 	text-transform: uppercase;
 	padding: 20px 0px 20px 0px;
+	@include adaptiveValue("font-size", 40, 24, 992, 600, 1);
+	@include adaptiveValue("line-height", 60, 30, 992, 600, 1);
+	@include adaptiveValue("padding-top", 20, 0, 992, 600, 1);
+	@include adaptiveValue("padding-botom", 20, 10, 992, 600, 1);
 }
 
 .section-title-h2w {
-	font-size: 40px;
-	line-height: rem(60);
 	font-weight: 900;
 	color: $white;
 	letter-spacing: rem(2);
 	text-transform: uppercase;
 	padding: 20px 0px 20px 0px;
+	@include adaptiveValue("font-size", 40, 24, 992, 600, 1);
+	@include adaptiveValue("line-height", 60, 30, 992, 600, 1);
+	@include adaptiveValue("padding-top", 20, 0, 992, 600, 1);
+	@include adaptiveValue("padding-botom", 20, 10, 992, 600, 1);
 }
 
 .section-title-h2z {
-	font-size: 40px;
-	line-height: rem(60);
 	font-weight: 900;
 	color: $color-zenit;
 	letter-spacing: rem(2);
 	text-transform: uppercase;
 	padding: 20px 0px 20px 0px;
+	@include adaptiveValue("font-size", 40, 24, 992, 600, 1);
+	@include adaptiveValue("line-height", 60, 30, 992, 600, 1);
+	@include adaptiveValue("padding-top", 20, 0, 992, 600, 1);
+	@include adaptiveValue("padding-botom", 20, 10, 992, 600, 1);
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================

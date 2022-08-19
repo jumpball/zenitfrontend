@@ -1,20 +1,12 @@
-// === MAIN MENU === //
+// === MAIN MENU === // (AD)
 
 .menu {
-	// .menu__container
 	&__container {
-		//width: 100%;
-		//display: flex;
-		//align-items: center;
-		//justify-content: space-between;
-		//gap: rem(10);
 	}
 
-	// .menu__body
 	&__body {
 		position: relative;
 		width: 100%;
-		//z-index: 2;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -55,7 +47,6 @@
 		}
 	}
 
-	// .menu__nav
 	&__nav {
 		@media (max-width: 1050px) {
 			position: fixed;

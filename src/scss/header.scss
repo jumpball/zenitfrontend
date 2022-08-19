@@ -1,87 +1,71 @@
-// === HEADER === //
+// === HEADER === // (AD)
 .header {
-	//position: absolute;
+	position: relative;
 	width: 100%;
-	//top: 0;
-	//left: 0;
-	//right: 0;
 
 	&._header-scroll .menu__logo {
-		//position: fixed;
-		//top: -120px;
 		opacity: 1;
 		transition: top 1s ease 0s;
 	}
-
 	&._header-scroll &__logo {
 		opacity: 0;
 	}
 
 	&._header-show {
-		//transition: top 0.3s ease 0s;
-		//top: 0;
 	}
 
-	// .header__body
 	&__body {
 		position: relative;
-		//z-index: 2;
 	}
 
-	// .header__container
-	&__container {
-	}
+	// === HEADER TOP === //
 
-	// .header__top
 	&__top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: rem(10);
 		padding: rem(20) 0px;
 		@media (max-width: rem(1050)) {
 			display: none;
 		}
 	}
 
-	// .header__logo
-	&__logo img {
+	// === HEADER LOGO === //
+	&__logo {
 		height: rem(80);
 		width: rem(170);
 	}
 
-	// .header__icons
+	// === HEADER ICONS === //
 	&__icons {
 	}
 
-	// .header__icons-list
 	&__icons-list {
 		display: flex;
 		align-items: center;
 		justify-content: end;
 		gap: rem(10);
+		@include adaptiveValue("gap", 15, 10, 992, 600, 1);
 		@media (max-width: rem(600)) {
 			justify-content: space-between;
-			padding-left: rem(40);
-			padding-right: rem(40);
+			padding-left: rem(20);
+			padding-right: rem(20);
 			height: rem(80);
 			background-color: $mainColor;
 			border-top: rem(1) solid $color-zenit;
 		}
 	}
 
-	// .header__icons-item
 	&__icons-item img {
 		height: rem(50);
 		width: rem(50);
-	}
-
-	// .header__icons-link
-	&__icons-link {
 		cursor: pointer;
 	}
 
-	// .header__menu
+	&__icons-link {
+	}
+
+	// === HEADER MENU === //
 	&__menu {
 		width: 100%;
 		background: $color-zenit;
@@ -92,7 +76,8 @@
 			position: fixed;
 			top: 0;
 			left: 0;
+			right: 0;
+			width: 100%;
 		}
 	}
 }
-// === //

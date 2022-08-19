@@ -1,5 +1,6 @@
 .banner-slider-vert {
 	height: rem(400);
+
 	//padding: 0px 0 0px 0;
 
 	//margin-top: rem(20);
@@ -19,8 +20,8 @@
 
 	// === ITEM === //
 	&__item {
-		position: relative;
-		width: auto;
+		//position: relative;
+		//width: auto;
 		border: rem(1) solid $color-zenit;
 		border-radius: rem(3);
 		//box-shadow: $shadow-1;
@@ -28,8 +29,11 @@
 
 	// === IMAGE === //
 	&__image {
-		width: auto;
-		height: rem(190);
+		position: relative;
+		padding: 0px 0px 58% 0px;
+		overflow: hidden;
+		//width: auto;
+		//height: rem(190);
 		// @media (max-width: rem(1800)) {
 		// 	height: rem(300);
 		// }

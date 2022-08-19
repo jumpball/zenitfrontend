@@ -23,18 +23,18 @@ var swiper = new Swiper('.blog-slider', {
 // === CALENDAR SLIDER === //
 
 var swiper = new Swiper('.calendar-slider', {
-	slidesPerView: 4,
+	slidesPerView:'auto',
 	spaceBetween: 20,
 	observer: true,
 	observeParents: true,
 	observeSlideChildren: true,
-	freeMode: true,
+	//freeMode: true,
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	stopOnLastSlide: false,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 9000,
+		stopOnLastSlide: false,
+		disableOnInteraction: false,
+	},
 	mousewheel: {
 		invert: false,
 	},
@@ -53,18 +53,22 @@ var swiper = new Swiper('.calendar-slider', {
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 20,
-			autoHeight: true,
+
 		},
-		768: {
+		650: {
 			slidesPerView: 2,
 			spaceBetween: 20,
 		},
-		992: {
+		950: {
 			slidesPerView: 3,
 			spaceBetween: 20,
 		},
-		1268: {
+		1220: {
 			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+		1600: {
+			slidesPerView: 5,
 			spaceBetween: 20,
 		},
 	}
@@ -75,7 +79,6 @@ var swiper = new Swiper('.calendar-slider', {
 
 var swiper = new Swiper('.head-slider', {
 	slidesPerView: 'auto',
-	//slidesPerView: 3,
 	spaceBetween: 20,
 	observer: true,
 	observeParents: true,
@@ -130,8 +133,8 @@ var swiper = new Swiper('.head-slider', {
 // === PUBLICATION MENU === //
 
 var swiper = new Swiper('.pub-menu-slider', {
-	//slidesPerView: 'auto',
-	slidesPerView: 6,
+	slidesPerView: 'auto',
+	//slidesPerView: 6,
 	spaceBetween: 20,
 	observer: true,
 	observeParents: true,
@@ -161,19 +164,16 @@ var swiper = new Swiper('.pub-menu-slider', {
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 20,
-			autoHeight: true,
 		},
 			470: {
 			slidesPerView: 2,
 			spaceBetween: 20,
-			autoHeight: true,
 		},
 			690: {
 			slidesPerView: 3,
 			spaceBetween: 20,
-			autoHeight: true,
 		},
-		920: {
+		910: {
 			slidesPerView: 4,
 			spaceBetween: 20,
 		},
@@ -181,7 +181,7 @@ var swiper = new Swiper('.pub-menu-slider', {
 			slidesPerView: 5,
 			spaceBetween: 20,
 		},
-		1375: {
+		1360: {
 			slidesPerView: 6,
 			spaceBetween: 20,
 		},
@@ -203,11 +203,7 @@ var swiper = new Swiper('.banner-slider', {
 	autoHeight: true,
 	centeredSlides: true,
 	
-	// autoplay: {
-	// 	delay: 10000,
-	// 	stopOnLastSlide: false,
-	// 	disableOnInteraction: false,
-	// },
+	
 	// effect: 'coverflow',
 	// coverflowEffect: {
 	// rotate: 15,
@@ -232,15 +228,14 @@ var swiper = new Swiper('.banner-slider', {
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
-			spaceBetween: 0,
-			//autoHeight: true,
+			spaceBetween: 20,
 		},
-		1000: {
+		600: {
 			slidesPerView: 2,
 			spaceBetween: 20,
-			//direction: 'vertical',
+			centeredSlides: false,
 		},
-		1800: {
+		992: {
 			slidesPerView: 3,
 			spaceBetween: 20,
 		},
@@ -292,15 +287,14 @@ var swiper = new Swiper('.banner-slider-vert', {
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
-			spaceBetween: 0,
-			
+			spaceBetween: 20,
 		},
-		1000: {
+		600: {
 			slidesPerView: 2,
 			spaceBetween: 20,
-			
+			direction: 'horizontal',
 		},
-		1400: {
+		992: {
 			slidesPerView: 2,
 			spaceBetween: 20,
 		},

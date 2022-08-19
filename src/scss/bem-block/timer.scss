@@ -1,32 +1,42 @@
-.visually-hidden {
-	// position: absolute !important;
-	// clip: rect(1px 1px 1px 1px);
-	// /* IE6, IE7 */
-	// clip: rect(1px, 1px, 1px, 1px);
-	// padding: 0 !important;
-	// border: 0 !important;
-	// height: 1px !important;
-	// width: 1px !important;
-	// overflow: hidden;
-}
+// === TIMER NEXT GAME === // (AD)
 
 .time-count {
-	background-color: $mainColor;
-	width: rem(378);
-	padding: rem(20) rem(35);
+	position: absolute;
+	top: -140px;
+	right: calc(50% - 197.5px);
+	width: rem(395);
 	border: rem(1) solid $white;
 	border-radius: rem(3);
+	background-color: $mainColor;
+	padding: rem(20) rem(35);
+
+	@media (max-width: rem(1090)) {
+		width: rem(334);
+		right: calc(50% - 167px);
+	}
+	@media (max-width: $tablet) {
+		right: 0;
+	}
+	@media (max-width: rem(680)) {
+		position: relative;
+		width: 100%;
+		top: 0;
+		margin-bottom: rem(20);
+	}
 }
 
 .time-count__title {
 	margin: 0;
-	//margin-bottom: 35px;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 20px;
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: rem(24);
 	text-align: center;
 	text-transform: uppercase;
 	color: $white;
+	@media (max-width: rem(420)) {
+		font-size: rem(12);
+		line-height: rem(24);
+	}
 }
 
 .time-count__content {
@@ -44,6 +54,11 @@
 	font-size: 32px;
 	line-height: 36px;
 	color: $white;
+	@media (max-width: rem(420)) {
+		min-width: rem(40);
+		font-size: rem(20);
+		line-height: rem(24);
+	}
 }
 
 .time-count__separator {
@@ -53,12 +68,20 @@
 	text-align: center;
 	color: $white;
 	margin: 0 rem(10);
+	@media (max-width: rem(420)) {
+		font-size: rem(20);
+		line-height: rem(24);
+	}
 }
 
 .time-count__text {
 	//font-family: "Noto Sans", sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 20px;
 	color: $white;
+	@media (max-width: rem(420)) {
+		font-size: rem(10);
+		line-height: rem(18);
+	}
 }

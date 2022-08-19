@@ -1,6 +1,5 @@
+// === PUB MENU SLIDER === //
 .pub-menu-slider {
-	//margin-bottom: rem(30);
-	//z-index: 1;
 	// === BOX === //
 	&__box {
 		overflow: hidden;
@@ -12,10 +11,7 @@
 
 	// === ITEM === //
 	&__item {
-		//position: relative;
 		width: auto;
-		//border: rem(1) solid $white;
-		//border-radius: rem(3);
 	}
 
 	// === NAVIGATION & PAGINATION === //
@@ -32,14 +28,13 @@
 	}
 	.swiper-pagination {
 		position: relative;
-		margin-top: rem(30);
+		@include adaptiveValue("margin-top", 30, 20, 992, 600, 1);
 	}
 
 	.swiper-pagination-bullet {
-		width: rem(20);
-		height: rem(20);
-		line-height: rem(20);
-		font-size: rem(30);
+		@include adaptiveValue("width", 20, 14, 992, 600, 1);
+		@include adaptiveValue("height", 20, 14, 992, 600, 1);
+		@include adaptiveValue("line-height", 20, 14, 992, 600, 1);
 		background-color: $color-zenit;
 		border: rem(1) solid $white;
 	}
@@ -48,6 +43,5 @@
 		//box-shadow: $shadow-1;
 	}
 	.swiper-slide-active &__slide-label {
-		//opacity: 1;
 	}
 }

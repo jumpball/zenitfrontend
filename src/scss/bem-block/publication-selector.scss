@@ -1,19 +1,16 @@
+// === PUBLICATION SELECTOR (CONTENT) === // (AD)
 .publication-selector {
-	// .publication-selector__menu
+	// === MENU === //
 	&__menu {
-		// display: flex;
-		// align-items: center;
-		// justify-content: end;
-		//column-gap: 40px;
 	}
 
-	// .publication-selector__btn
+	// === BUTTON === //
 	&__btn {
 		margin-top: rem(20);
 		display: inline-flex;
 		width: 100%;
 		background-color: $white;
-		padding: 25px 35px;
+		padding: rem(25) rem(35);
 		border-radius: 5px;
 		min-width: 205px;
 		color: $color-zenit;
@@ -40,11 +37,9 @@
 		color: $white;
 	}
 
-	// .publication-selector__list
+	// === LIST === //
 	&__list {
 		width: 100%;
-		//padding: 20px 0px 40px 0px;
-		//margin-top: 40px;
 		column-count: 4;
 		margin: auto;
 		gap: 20px;
@@ -59,11 +54,11 @@
 		}
 	}
 
-	// .publication-selector__item
+	// === ITEM === //
 	&__item {
 		float: left;
 		display: block;
-		margin-top: 40px;
+		margin-top: 20px;
 		page-break-inside: avoid;
 		break-inside: avoid;
 		position: relative;

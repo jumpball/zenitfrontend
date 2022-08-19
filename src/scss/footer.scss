@@ -4,7 +4,7 @@ footer#site-footer {
 	width: 100%;
 	//width: 960px;
 	background: $mainColor;
-	padding: 1rem;
+	//padding: 1rem;
 	color: $gray;
 }
 
@@ -25,7 +25,8 @@ footer#site-footer section.horizontal-footer-section {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
-	padding: 2.38rem 2rem;
+	//padding: 2.38rem 2rem;
+	padding: rem(40) rem(32);
 }
 
 .footer-icons__list {
@@ -148,11 +149,13 @@ footer#site-footer ul.footer-column-menu li {
 	list-style-type: none;
 	margin-bottom: 0.68rem;
 	font-size: 0.88rem;
+	line-height: rem(20);
 }
 
 footer#site-footer #footer-about address {
 	font-style: normal;
-	font-weight: bold;
+	//font-weight: bold;
+	font-weight: 700;
 }
 
 footer#site-footer #footer-about address p img {
@@ -165,7 +168,7 @@ footer#site-footer #footer-about a.footer-button {
 
 footer#site-footer section.horizontal-footer-section#footer-bottom-section {
 	padding: 1.32rem 0;
-	margin: 2rem 2rem 1.32rem 2rem;
+	//margin: 2rem 2rem 1.32rem 2rem;
 	border-top: 0.05rem solid $gray;
 	@media (max-width: 960px) {
 		border-top: none;
@@ -202,7 +205,9 @@ footer#site-footer #footer-social-buttons img:hover {
 
 	footer#site-footer ul li {
 		display: block !important;
-		padding: 1em !important;
+		padding: rem(10);
+		//padding: 1em !important;
+		padding: rem(20) 0px rem(20) 0px;
 		border-top: 1px solid $gray;
 		border-bottom: none;
 		border-left: none;
@@ -211,7 +216,7 @@ footer#site-footer #footer-social-buttons img:hover {
 	}
 
 	footer#site-footer ul li:first-child {
-		border-top: none;
+		//border-top: none;
 	}
 
 	footer#site-footer a.footer-button {
@@ -291,12 +296,35 @@ footer#site-footer #footer-social-buttons img:hover {
 
 .footer {
 	&__address p {
-		//line-height: 20px;
+		line-height: rem(20);
 		padding-bottom: 12px;
+		font-weight: 400;
+		@media (max-width: rem(350)) {
+			font-size: rem(12);
+		}
 	}
 	&__icon {
-		height: 14px;
-		width: 14px;
+		height: 16px;
+		width: 16px;
+	}
+
+	&__icons-list {
+		display: grid;
+		grid-template-columns: rem(50) rem(50) rem(50) rem(50) rem(50);
+		column-gap: rem(30);
+		@media (max-width: rem(956)) {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			column-gap: 0;
+		}
+		//@include adaptiveValue("gap", 40, 30);
+	}
+	&__icons-link img {
+		width: rem(50);
+		height: rem(50);
+		//@include adaptiveValue("width", 60, 40);
+		//@include adaptiveValue("height", 60, 40);
 	}
 }
 //====================================================================================================

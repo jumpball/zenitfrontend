@@ -1,30 +1,26 @@
+// === CALENDAR SLIDER === // (AD)
+
 .calendar-slider {
 	overflow: hidden;
-	//height: rem(300);
-
 	&__box {
 		position: relative;
-	}
-	&__timer {
-		position: absolute;
-		top: -140px;
-		//left: 0;
-		//display: flex;
-		//gap: rem(20);
-		left: calc(50% - 190px);
 	}
 
 	&__btn {
 		position: absolute;
-		//top: -105px;
-		//right: 0;
 		width: rem(378);
 		color: $white;
 		background-color: $mainColor;
 		border: rem(1) solid $white;
-
 		bottom: -70px;
 		left: calc(50% - 190px);
+		@media (max-width: rem(650)) {
+			bottom: -80px;
+		}
+		@media (max-width: rem(450)) {
+			width: 100%;
+			left: 0;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -63,21 +59,16 @@
 	.swiper-pagination {
 		position: relative;
 		margin-top: rem(30);
+		@media (max-width: rem(650)) {
+			display: none;
+		}
 	}
 
 	.swiper-pagination-bullet {
 		width: rem(20);
 		height: rem(20);
 		line-height: rem(20);
-		font-size: rem(30);
 		background-color: $white;
 		border: rem(1) solid $color-zenit;
 	}
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-
-.swiper-pagination {
 }

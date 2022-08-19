@@ -94,6 +94,17 @@
 	}
 }
 
+.team-box {
+	width: 100%;
+	height: rem(480);
+	background-color: $white;
+	border-radius: rem(3);
+	text-align: center;
+	font-weight: 900;
+	color: $bgColor_2;
+	line-height: rem(480);
+	@include adaptiveValue("font-size", 120, 18);
+}
 // === TAB to SLIDER === //
 .b-tab {
 	display: none;
