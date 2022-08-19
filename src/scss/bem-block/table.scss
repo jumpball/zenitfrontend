@@ -70,6 +70,27 @@
 	&__img {
 	}
 
+	// .table__img
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: rem(3);
+	}
+	&__circle-blue {
+		width: rem(18);
+		height: rem(18);
+		background-color: $blue;
+		border-radius: rem(50);
+	}
+	&__circle-red {
+		width: rem(18);
+		height: rem(18);
+		background-color: $red;
+		border-radius: rem(50);
+	}
+
 	// .table__text
 	&__text {
 	}
@@ -81,7 +102,9 @@
 	align-items: center;
 	justify-content: start;
 	text-align: start;
-	column-gap: 5px;
+	column-gap: rem(5);
+	text-transform: uppercase;
+	font-size: rem(14);
 	@media (max-width: 600px) {
 		width: 60px;
 	}
