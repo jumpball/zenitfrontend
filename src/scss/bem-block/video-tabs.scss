@@ -1,56 +1,59 @@
-// === VIDEO TABS === //
+// === VIDEO TABS === // (AD)
 
 .video-tabs {
 	display: grid;
-	grid-template-columns: 1fr rem(380);
-	gap: rem(20);
-	@media (max-width: rem(1050)) {
-		grid-template-columns: 1fr rem(360);
-	}
+	grid-template-columns: 1fr rem(354);
+	gap: rem(10);
 	@media (max-width: $tablet) {
 		grid-template-columns: 1fr;
 	}
 
 	// === NAVIGATION === //
 	&__navigation-box {
-		height: rem(620);
+		height: rem(590);
 		overflow: auto;
-		@media (max-width: rem(1050)) {
-			height: rem(460);
+		@media (max-width: rem(1100)) {
+			height: rem(440);
 		}
 		@media (max-width: $tablet) {
-			flex-direction: row;
-			height: auto;
+			height: rem(154);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(134);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(114);
 		}
 	}
 
 	&__navigation {
-		height: 100%;
+		// height: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: start;
-		gap: rem(20);
+		gap: rem(10);
 
-		@media (max-width: rem(1050)) {
-			height: rem(460);
-		}
+		// @media (max-width: rem(1100)) {
+		// 	height: rem(460);
+		// }
 		@media (max-width: $tablet) {
+			//display: grid;
+			//grid-template-columns: ;
 			flex-direction: row;
 			height: auto;
+			//width: 100%;
 		}
 	}
 
-	// === TITLE === //
-	&__title {
-		display: flex;
-		gap: rem(10);
-		color: $mainColor;
+	// === TITLE-1 === //
+	&__title-1 {
+		//display: block;
+		position: relative;
 		background-color: $white;
-		padding: rem(20) rem(10) rem(20) rem(10);
-		width: 100%;
+		width: rem(340);
 		height: rem(140);
-		border: rem(1) solid $color-zenit;
+		border: rem(5) solid $white;
 		border-radius: rem(3);
 		text-align: start;
 		@include adaptiveValue("font-size", 18, 14, 1250, 600, 1);
@@ -59,129 +62,100 @@
 				box-shadow: $shadow-1;
 			}
 		}
+
 		@media (max-width: $tablet) {
-			width: rem(240);
-			flex-direction: column;
-			align-items: center;
-			justify-content: flex-start;
-			height: auto;
-			padding: rem(10);
+			min-width: rem(270);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(120);
+			min-width: rem(220);
+		}
+
+		@media (max-width: rem(410)) {
+			height: rem(100);
+			min-width: rem(200);
+			font-weight: 300;
 		}
 		@media (max-width: $mobileSmall) {
-			width: rem(240);
 		}
 	}
-	&__title._tab-active {
-		background-color: $color-zenit;
-		border: rem(5) solid $white;
-		padding: rem(15) rem(5) rem(15) rem(5);
+	&__title-1 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+	&__text-title-1 {
+		display: block;
+		font-weight: 500;
+		position: absolute;
+		bottom: 0;
+		//font-size: rem(16);
+		line-height: rem(18);
+		left: 0;
 		color: $white;
-		//height: rem(140);
-		font-weight: 600;
+		padding: rem(8) rem(8) rem(8) rem(8);
+		-webkit-backdrop-filter: blur(1px);
+		backdrop-filter: blur(1px);
+		background-color: rgba(58, 58, 58, 0.5);
+		width: 100%;
+	}
+	&__title-1._tab-active {
 		@media (max-width: $tablet) {
-			padding: rem(5);
 		}
 	}
-
-	&__image {
-		min-width: rem(150);
-		min-height: rem(100);
-		border: rem(1) solid $white;
-		border-radius: rem(3);
-		@media (max-width: rem(1050)) {
-			min-width: rem(140);
-		}
-		@media (max-width: $tablet) {
-			//min-width: rem(200);
-			width: 100%;
-		}
-		@media (max-width: $mobileSmall) {
-			min-width: rem(140);
-			height: rem(80);
-		}
-	}
-
-	&__image._tab-active {
-		border: rem(1) solid $white;
-	}
-
-	// .video-tabs__body
-	&__text {
-		@media (max-width: $tablet) {
-			width: rem(220);
-			height: rem(60);
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -moz-box;
-			display: -webkit-box;
-			line-clamp: 3;
-			box-orient: vertical;
-			-moz-box-orient: vertical;
-			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
-		}
-		@media (max-width: rem(550)) {
-			height: rem(36);
-			line-clamp: 2;
-			-webkit-line-clamp: 2;
-		}
-	}
-
-	// .video-tabs__content
+	// === CONTENT === //
 	&__content {
 		background-color: $white;
-		padding: rem(20);
-		height: rem(620);
+		padding: rem(5);
+		height: rem(590);
 		width: 100%;
-		//border: rem(1) solid $white;
 		border-radius: rem(3);
-		@media (max-width: rem(1050)) {
-			height: rem(460);
+		@media (max-width: rem(1100)) {
+			height: rem(440);
 		}
 		@media (max-width: $tablet) {
 			height: auto;
-			padding: rem(10);
-		}
-
-		@media (max-width: $mobileSmall) {
-			padding: 0px;
 		}
 	}
 
-	// .video-tabs__body
 	&__body {
 	}
 
-	// .video-tabs__item
 	&__item {
 		position: relative;
 		height: rem(580);
-		//border: rem(1) solid $color-zenit;
 		border-radius: rem(3);
 		overflow: hidden;
-		@media (max-width: rem(1050)) {
-			height: rem(420);
+		@media (max-width: rem(1100)) {
+			height: rem(430);
 		}
 		@media (max-width: $mobile) {
-			height: rem(320);
+			height: rem(350);
 		}
-		@media (max-width: $mobileSmall) {
-			height: rem(260);
+		@media (max-width: rem(620)) {
+			height: rem(300);
 		}
-		@media (max-width: rem(420)) {
+		@media (max-width: rem(540)) {
+			height: rem(250);
+		}
+		@media (max-width: rem(440)) {
 			height: rem(200);
+		}
+		@media (max-width: rem(410)) {
+			height: auto;
 		}
 	}
 
 	&__item iframe {
 		object-fit: cover;
-		//position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
 		width: 100%;
 	}
 
+	// === LABEL === //
 	&__label {
 		position: absolute;
 		text-transform: uppercase;

@@ -11,12 +11,9 @@
 
 
 
-			<section class="head-slider__section section-offset">
-				<!-- <div class="section__container">
-					
-				</div> -->
+			<div class="head-slider__section section-offset">
 				@@include('html/_head-slider.htm',{})
-			</section>
+			</div>
 
 
 			<section class="calendar-slider__section section-offset diagonal-box bg-one">
@@ -27,11 +24,11 @@
 				</div>
 			</section>
 
-			<section class="banner__section section-offset">
+			<div class="banner__section section-offset">
 				<div class="section__container">
 					@@include('html/_banner-slider.htm',{})
 				</div>
-			</section>
+			</div>
 
 
 
@@ -104,25 +101,33 @@
 					<h2 class="section-title-h2w element-animation">Команды</h2>
 					<div data-tabs="960" data-tabs-animate="1000" class="tabs tab__block team-roster__tabs">
 						<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
-							<button type="button" class="tab__title-w _tab-active">
+
+							<!-- <button type="button" class="tab__title-w _tab-active">
 								<a href="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w active">
 									Зенит
 								</a>
+							</button> -->
+
+							<button type="button" class="tab__title-w _tab-active">
+								<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w active">
+									Зенит
+								</span>
 							</button>
+
 							<button type="button" class="tab__title-w">
-								<a href="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w">
+								<span id="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w">
 									Зенит-2
-								</a>
+								</span>
 							</button>
 							<button type="button" class="tab__title-w">
-								<a href="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w">
+								<span id="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w">
 									Зенит-М
-								</a>
+								</span>
 							</button>
 							<button type="button" class="tab__title-w">
-								<a href="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w">
+								<span id="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w">
 									Зенит-ДЮБЛ
-								</a>
+								</span>
 							</button>
 
 						</nav>
