@@ -5,9 +5,10 @@
 	&__box {
 		position: relative;
 		overflow: hidden;
+		//margin-top: rem(30);
 		@media (max-width: rem(1050)) {
 			//margin-top: rem(60);
-			@include adaptiveValue("margin-top", 60, 40, 1050, 600, 1);
+			//@include adaptiveValue("margin-top", 60, 40, 1050, 600, 1);
 		}
 	}
 
