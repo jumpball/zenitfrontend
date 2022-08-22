@@ -1,10 +1,14 @@
 <header class="header">
-	<div class="header__body">
+	<div class="header__container">
+		<div class="header__body">
+			<div class="header__logo element-animation -ibg">
+				<a href="#" class="header__logo-link">
+					<img src="@img/logo/Zenit-logo-bc-wh.svg" alt="Лого бакетбольного клуба Зенит">
+				</a>
+			</div>
+			<div class="header__top">
 
-
-		<div class="header__top">
-			<div class="header__container">
-				<div class="header__icons element-animation">
+				<div data-da=".header__menu, 991.98,2" class="header__icons">
 					<ul class="header__icons-list">
 						<li class="header__icons-item"><a href="#" class="header__icons-link">
 								<img src="@img/icon/twitter-1-white.svg" alt="иконка Твиттер"></a>
@@ -23,16 +27,11 @@
 						</li>
 					</ul>
 				</div>
-				<button type="button" class="header__menu-burger icon-menu"><span></span></button>
+
+
 			</div>
-		</div>
-		<nav data-sticky-item class="header__menu">
-			<div class="header__container">
-				<div class="header__logo element-animation -ibg">
-					<a href="#" class="header__logo-link">
-						<img src="@img/logo/Zenit-logo-bc-wh.svg" alt="Лого бакетбольного клуба Зенит">
-					</a>
-				</div>
+			<button type="button" class="header__menu-burger icon-menu"><span></span></button>
+			<nav class="header__menu">
 				<ul class="header__menu-list">
 					<li class="header__menu-item"><a href="#" class="header__menu-link">Билеты</a></li>
 					<li class="header__menu-item"><a href="#" class="header__menu-link">Новости</a></li>
@@ -43,10 +42,8 @@
 					<li class="header__menu-item"><a href="#" class="header__menu-link">Фан-зона</a></li>
 					<li class="header__menu-item"><a href="#" class="header__menu-link">Магазин</a></li>
 				</ul>
-			</div>
-
-		</nav>
-
+			</nav>
+		</div>
 	</div>
 </header>
 

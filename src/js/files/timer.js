@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const this_data = new Date();
-	this_data.setDate(this_data.getDate() + 6);
+	this_data.setDate(this_data.getDate() + 7);
 	console.log(this_data)
 	
 	const daysVal = document.querySelector('.time-count__days .time-count__val');

@@ -2,43 +2,13 @@
 <div class="calendar-slider__box">
 	<button type="button" class="publication-selector__btn calendar-slider__btn element-animation">купить
 		абонемент</button>
-
-	<div class="time-count calendar-slider__timer element-animation">
-		<h3 class="time-count__title">следующий матч через</h3>
-		<div class="time-count__content">
-			<div class="time-count__item time-count__days">
-				<div class="time-count__val">00</div>
-				<span class="time-count__text">дней</span>
-			</div>
-			<div class="time-count__separator">:</div>
-			<div class="time-count__item time-count__hours">
-				<div class="time-count__val">00</div>
-				<span class="time-count__text">часов</span>
-			</div>
-			<div class="time-count__separator">:</div>
-			<div class="time-count__item time-count__minutes">
-				<div class="time-count__val">00</div>
-				<span class="time-count__text">минут</span>
-			</div>
-			<div class="time-count__separator">:</div>
-			<div class="time-count__item time-count__seconds">
-				<div class="time-count__val">00</div>
-				<span class="time-count__text">секунд</span>
-			</div>
-		</div>
-	</div>
-
-
 	<div class="calendar-slider">
 		<div class="swiper-wrapper calendar-slider__wrapper">
 
 			<div class="calendar-slider__item swiper-slide">
-				<div class="game-card__body">
-					<!-- <div class="game-card__mini-logo -ibg">
-		<img data-src="@img/logo/9.png" alt="">
-	</div> -->
-					<h3 class="game-card__time">19:00</h3>
 
+				<div class="game-card__body">
+					<h3 class="game-card__time">19:00</h3>
 					<div class="game-card__date">
 						<h4 class="game-card__day">01</h4>
 						<div class="game-card__label">
@@ -71,15 +41,12 @@
 						<span>Единая Лига ВТБ</span>
 						<p>Академия Баскетбола "Зенит"</p>
 						<p>Санкт-Петербург, Россия</p>
-						<button type="button" class="game-card__btn">статистика</button>
+						<button data-popup="#go-to-game" type="button" class="game-card__btn">подробнее</button>
 					</div>
 				</div>
 			</div>
 			<div class="calendar-slider__item swiper-slide">
 				<div class="game-card__body">
-					<!-- <div class="game-card__mini-logo -ibg">
-			<img data-src="@img/logo/9.png" alt="">
-		</div> -->
 					<h3 class="game-card__time">20:30</h3>
 
 					<div class="game-card__date">
@@ -114,17 +81,13 @@
 						<span>Единая Лига ВТБ</span>
 						<p>Академия Баскетбола "Зенит"</p>
 						<p>Санкт-Петербург, Россия</p>
-						<button type="button" class="game-card__btn">купить билет</button>
+						<button data-popup="#go-to-game" type="button" class="game-card__btn">подробнее</button>
 					</div>
 				</div>
 			</div>
 			<div class="calendar-slider__item swiper-slide">
 				<div class="game-card__body">
-					<!-- <div class="game-card__mini-logo -ibg">
-			<img data-src="@img/logo/9.png" alt="">
-		</div> -->
 					<h3 class="game-card__time">18:45</h3>
-
 					<div class="game-card__date">
 						<h4 class="game-card__day">11</h4>
 						<div class="game-card__label">
@@ -157,17 +120,13 @@
 						<span>Единая Лига ВТБ</span>
 						<p>СИБУР Арена</p>
 						<p>Санкт-Петербург, Россия</p>
-						<button type="button" class="game-card__btn">купить билет</button>
+						<button data-popup="#go-to-game" type="button" class="game-card__btn">подробнее</button>
 					</div>
 				</div>
 			</div>
 			<div class="calendar-slider__item swiper-slide">
 				<div class="game-card__body">
-					<!-- <div class="game-card__mini-logo -ibg">
-			<img data-src="@img/logo/9.png" alt="">
-		</div> -->
 					<h3 class="game-card__time">17:00</h3>
-
 					<div class="game-card__date">
 						<h4 class="game-card__day">13</h4>
 						<div class="game-card__label">
@@ -200,7 +159,46 @@
 						<span>Единая Лига ВТБ</span>
 						<p>Академия Баскетбола "Зенит"</p>
 						<p>Санкт-Петербург, Россия</p>
-						<button type="button" class="game-card__btn">купить билет</button>
+						<button data-popup="#go-to-game" type="button" class="game-card__btn">подробнее</button>
+					</div>
+				</div>
+			</div>
+			<div class="calendar-slider__item swiper-slide">
+				<div class="game-card__body">
+					<h3 class="game-card__time">19:30</h3>
+					<div class="game-card__date">
+						<h4 class="game-card__day">24</h4>
+						<div class="game-card__label">
+							<div class="game-card__months">февраля</div>
+							<div class="game-card__months-1">фев</div>
+							<div class="game-card__week">суббота</div>
+							<div class="game-card__week-1">сб</div>
+						</div>
+
+					</div>
+					<div class="game-card__team-name">
+						<h3 class="game-card__title game-card__title-r">Самара</h3>
+						<h3 class="game-card__title">-</h3>
+						<h3 class="game-card__title game-card__title-l">зенит</h3>
+					</div>
+					<div class="game-card__teams">
+						<div class="game-card__team -ibg">
+							<img data-src="@img/logo/6.png" alt="">
+						</div>
+						<div class="game-card__score">
+							<h3 class="game-card__team-score game-card__title-r">0</h3>
+							<p class="game-card__team-score-1">-</p>
+							<h3 class="game-card__team-score game-card__title-l">0</h3>
+						</div>
+						<div class="game-card__team -ibg">
+							<img data-src="@img/logo/1.png" alt="">
+						</div>
+					</div>
+					<div class="game-card__content">
+						<span>Единая Лига ВТБ</span>
+						<p>Академия Баскетбола "Зенит"</p>
+						<p>Санкт-Петербург, Россия</p>
+						<button data-popup="#go-to-game" type="button" class="game-card__btn">подробнее</button>
 					</div>
 				</div>
 			</div>

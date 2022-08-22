@@ -1,11 +1,15 @@
 // === HEAD SLIDER === // (AD)
 .head-slider {
+	margin-top: rem(140);
 	@include adaptiveValue("margin-bottom", 30, 20, 992, 600, 1);
+	@media (max-width: $tablet) {
+		margin-top: rem(55);
+	}
 	// === BOX === //
 	&__box {
 		position: relative;
 		overflow: hidden;
-		//margin-top: rem(30);
+
 		@media (max-width: rem(1050)) {
 			//margin-top: rem(60);
 			//@include adaptiveValue("margin-top", 60, 40, 1050, 600, 1);
@@ -94,7 +98,7 @@
 	}
 	// === SLIDE-ACTIVE === //
 	.swiper-slide-active {
-		box-shadow: $shadow-1;
+		//box-shadow: $shadow-1;
 	}
 	.swiper-slide-active &__slide-label {
 		opacity: 1;
