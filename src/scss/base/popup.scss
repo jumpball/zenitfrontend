@@ -49,7 +49,7 @@ body::after {
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
-	transition: transform 0.3s ease 0s;
+	transition: transform 0.8s ease 0s;
 	background-color: #eee;
 	padding: 20px;
 	width: 100%;
@@ -57,5 +57,46 @@ body::after {
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+}
+
+// === GAME POPUP === //
+.game-popup {
+	// === GAME POPUP LOGO === //
+	&__logo {
+		width: rem(60);
+		height: rem(60);
+		@media (max-width: rem(480)) {
+			width: rem(50);
+			height: rem(50);
+		}
+	}
+	// === GAME POPUP CLOSE === //
+	&__close {
+		width: rem(40);
+		height: rem(40);
+		@media (max-width: rem(480)) {
+			width: rem(30);
+			height: rem(30);
+		}
+	}
+
+	// === GAME POPUP CONTENT === //
+	&__content {
+		//position: relative;
+		background-color: $bgColor_8;
+		border-radius: rem(3);
+	}
+
+	// === GAME POPUP HEADER === //
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	// === GAME POPUP TEXT === //
+	&__text {
 	}
 }

@@ -2,29 +2,10 @@
 
 .time-count {
 	color: $mainColor;
-	//position: absolute;
-	//top: 0;
-	//left: 0;
-	//right: calc(50% - 197.5px);
-	//width: rem(395);
-	//width: auto;
-	//border: rem(1) solid $white;
 	border-radius: rem(3);
-	//background-color: $mainColor;
 	padding: rem(20);
-
-	@media (max-width: rem(1090)) {
-		//width: rem(334);
-		//right: calc(50% - 167px);
-	}
-	@media (max-width: $tablet) {
-		//right: 0;
-	}
-	@media (max-width: rem(680)) {
-		//position: relative;
-		//width: 100%;
-		//top: 0;
-		//margin-bottom: rem(20);
+	@media (max-width: rem(420)) {
+		padding: rem(10);
 	}
 }
 
@@ -38,9 +19,8 @@
 	text-align: center;
 	text-transform: uppercase;
 	text-align: center;
-	//color: $white;
-	@media (max-width: rem(420)) {
-		font-size: rem(12);
+	@media (max-width: rem(480)) {
+		font-size: rem(14);
 		line-height: rem(24);
 	}
 }
@@ -59,8 +39,7 @@
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 36px;
-	//color: $white;
-	@media (max-width: rem(420)) {
+	@media (max-width: rem(480)) {
 		min-width: rem(40);
 		font-size: rem(20);
 		line-height: rem(24);
@@ -72,24 +51,29 @@
 	font-size: 32px;
 	line-height: 36px;
 	text-align: center;
-	//color: $white;
 	margin: 0 rem(10);
-	@media (max-width: rem(420)) {
+	@media (max-width: rem(520)) {
 		font-size: rem(20);
 		line-height: rem(24);
+		margin: 0 rem(5);
+	}
+	@media (max-width: rem(420)) {
+		margin: 0;
 	}
 }
 
 .time-count__text {
-	//font-family: "Noto Sans", sans-serif;
 	display: block;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 20px;
-	//color: $white;
+	font-size: rem(14);
+	line-height: rem(20);
 	min-width: rem(57);
-	@media (max-width: rem(420)) {
+	@media (max-width: rem(480)) {
 		font-size: rem(10);
 		line-height: rem(18);
+		min-width: rem(50);
+	}
+	@media (max-width: rem(420)) {
+		min-width: rem(46);
 	}
 }

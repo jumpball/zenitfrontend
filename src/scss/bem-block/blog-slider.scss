@@ -76,7 +76,6 @@
 	}
 
 	&__img {
-		// width: 40%;
 		width: 300px;
 		flex-shrink: 0;
 		height: 360px;
@@ -91,7 +90,6 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			//background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
 			border-radius: 20px;
 			opacity: 0.8;
 		}
@@ -179,7 +177,7 @@
 		position: absolute;
 		top: rem(20);
 		right: rem(20);
-		width: 50%;
+		width: 45%;
 		@media (max-width: rem(1150)) {
 			width: 35%;
 		}
