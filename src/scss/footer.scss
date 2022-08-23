@@ -6,6 +6,7 @@ footer#site-footer {
 	background: $mainColor;
 	//padding: 1rem;
 	color: $gray;
+	z-index: 2;
 }
 
 footer#site-footer a {

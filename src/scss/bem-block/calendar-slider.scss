@@ -2,10 +2,12 @@
 
 .calendar-slider {
 	overflow: hidden;
+
+	// === CALENDAR SLIDER BOX === //
 	&__box {
 		position: relative;
 	}
-
+	// === CALENDAR SLIDER BTN === //
 	&__btn {
 		position: absolute;
 		width: rem(378);
@@ -14,6 +16,7 @@
 		border: rem(1) solid $white;
 		bottom: -70px;
 		left: calc(50% - 190px);
+		transition: transform all 0.5s ease 0s;
 		@media (max-width: rem(650)) {
 			bottom: -80px;
 		}
@@ -21,40 +24,40 @@
 			width: 100%;
 			left: 0;
 		}
-
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $cle_red;
+				background-color: $red;
 				transform: scale(1.2);
-				transition: transform 0.5s ease 0s;
+				transition: transform all 0.5s ease 0s;
 			}
 		}
 	}
-	// .calendar-slider__wrapper
+	// === CALENDAR SLIDER PARTNER === //
+	&__partner {
+		position: absolute;
+		right: 0;
+		@include adaptiveValue("top", -200, -90, 1600, 320, 1);
+		@include adaptiveValue("width", 284, 80, 1600, 320, 1);
+		@include adaptiveValue("height", 178, 50, 1600, 320, 1);
+	}
+	// === CALENDAR SLIDER WRAPPER === //
 	&__wrapper {
 	}
-
-	// .calendar-slider__item
-
+	// === CALENDAR SLIDER ITEM === //
 	&__item {
 		position: relative;
 	}
 
-	// .calendar-slider__pagination
-
-	&__pagination {
-	}
-
-	// .calendar-slider__navigation
-
+	// === CALENDAR SLIDER NAVIGATION === //
 	&__navigation {
 	}
-	// .calendar-slider__nav-prev
 	&__nav-prev {
 	}
-
-	// .calendar-slider__nav-next
 	&__nav-next {
+	}
+
+	// === CALENDAR SLIDER PAGINATION === //
+	&__pagination {
 	}
 
 	.swiper-pagination {
