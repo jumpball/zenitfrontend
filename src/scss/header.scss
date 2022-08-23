@@ -17,6 +17,9 @@
 		position: relative;
 		@media (max-width: $tablet) {
 			height: rem(80);
+			display: flex;
+			align-items: center;
+			justify-content: end;
 		}
 	}
 
@@ -47,8 +50,30 @@
 
 	// === HEADER TOP === //
 	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 		@media (max-width: $tablet) {
 			display: none;
+		}
+	}
+
+	// === HEADER FORM === //
+	&__form-select-lang {
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		margin: 0px 0px 0px rem(30);
+		color: $white;
+		padding-top: rem(5);
+		letter-spacing: rem(3);
+		text-align: center;
+		font-size: rem(24);
+		font-weight: 900;
+		border-radius: rem(3);
+		z-index: 3;
+		@media (max-width: $tablet) {
+			margin: 0px rem(80) 0px 0px;
 		}
 	}
 
@@ -68,6 +93,7 @@
 		justify-content: end;
 		height: rem(80);
 		width: 100%;
+		transition: all 0.8s ease 0s;
 		@media (max-width: $tablet) {
 			justify-content: space-between;
 		}
@@ -87,6 +113,7 @@
 		@include adaptiveValue("height", 50, 40, 800, 400, 1);
 		cursor: pointer;
 		z-index: 5;
+		transition: all 0.8s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $color-zenit;
