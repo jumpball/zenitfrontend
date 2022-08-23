@@ -251,7 +251,7 @@ var swiper = new Swiper('.partners-slider', {
 	observer: true,
 	observeParents: true,
 	observeSlideChildren: true,
-	freeMode: true,
+	//freeMode: true,
 	loop: true,
 	slideToClickedSlide: true,
 	//autoHeight: true,
