@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div data-sticky class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+
+
+
+
+
+
+
+			<section class="profile__section section-offset">
+				<div class="section__container">
+
+					<div class="profile-header">
+						<div class="profile-header__body">
+							<img class="profile-header__bg-logo" src="@img/logo/Zenit-logo-bc-tr.svg" alt="">
+							<div class="profile-header__item">
+								<div class="profile-header__photo -ibg">
+									<img src="@img/player/3.png" alt="">
+								</div>
+
+								<div data-da=".profile-body__text,720,1" class="profile-header__content">
+									<div data-da=".profile-header__body,720,2" class="profile-header__number">7</div>
+									<div class="profile-header__subtitle">легкий форвард</div>
+
+									<div class="profile-header__title element-animation">Карасев
+										Сергей</div>
+									<div class="profile-header__text profile-header__text-1">
+										26.10.1993</div>
+									<div class="profile-header__text profile-header__text-2">
+										Санкт-Петербург, Россия</div>
+									<div class="profile-header__text profile-header__text-3">
+										201 см / 96 кг</div>
+									<div data-da=".profile-header__body,720,1" class="profile-header__image -ibg">
+										<img src="@img/flag/RUS.svg" alt="Флаг страны гражданства игрока">
+
+									</div>
+									<!-- <a href="#" class=" profile-header__btn">подробнее</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="profile-body diagonal-box bg-one">
+					<div class="section__container content__box">
+						<div class="profile-body__text">
+
+						</div>
+						<div data-tabs="960" data-tabs-animate="1000" class="tabs tab__block profile-body__tabs">
+							<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
+								<button type="button" class="tab__title-w _tab-active">
+									<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w active">
+										статистика
+									</span>
+								</button>
+
+								<button type="button" class="tab__title-w">
+									<span id="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w">
+										Карта Бросков
+
+									</span>
+								</button>
+								<button type="button" class="tab__title-w">
+									<span id="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w">
+										Карьера
+									</span>
+								</button>
+								<button type="button" class="tab__title-w">
+									<span id="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w">
+										Достижения
+									</span>
+								</button>
+								<button type="button" class="tab__title-w">
+									<span id="#tab_5" data-tab="tab_5" class="b-nav-tab tab__link-w">
+										Фото
+									</span>
+								</button>
+
+							</nav>
+							<div data-tabs-body class="tabs__content tab__content">
+								<div id="tab_1" class="tabs__body tab__body team-roster__tab-body b-tab active">
+									<h2 class="section-title-h2w element-animation">статистика</h2>
+									@@include('html/_table.htm',{})
+
+								</div>
+								<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
+									<h2 class="section-title-h2w element-animation">Карта бросков</h2>
+									<div class="team-box">
+										Карта бросков
+
+									</div>
+								</div>
+								<div id="tab_3" class="tabs__body tab__body team-roster__tab-body b-tab">
+									<h2 class="section-title-h2w element-animation">Карьера</h2>
+
+									<div class="team-box">
+										Карьера и Биография
+									</div>
+								</div>
+								<div id="tab_4" class="tabs__body tab__body team-roster__tab-body b-tab">
+									<h2 class="section-title-h2w element-animation">Достижения</h2>
+
+									<div class="team-box">
+										Достижения и рекорды
+									</div>
+								</div>
+								<div id="tab_5" class="tabs__body tab__body team-roster__tab-body b-tab">
+									<h2 class="section-title-h2w element-animation">фото</h2>
+									@@include('html/_team-slider.htm',{})
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+			<section class="publication-selector__section">
+				<div class="section__container">
+					<h2 class="section-title-h2b publication-selector__title element-animation">Публикации</h2>
+					<!-- === PUBLICATION SELECTOR === -->
+					<div class="pub-menu-slider__box">
+						<div class="pub-menu-slider">
+							<div class="swiper-wrapper pub-menu-slider__wrapper publication-selector__menu">
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn publication-selector__btn-active"
+										data-view="pub-all">Все</button>
+								</div>
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn" data-view="pub-news">Новости</button>
+								</div>
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn"
+										data-view="pub-nterview">Интервью</button>
+								</div>
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn"
+										data-view="pub-article">Статьи</button>
+								</div>
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn" data-view="pub-video">Видео</button>
+								</div>
+								<div class="pub-menu-slider__item swiper-slide">
+									<button type="button" class="publication-selector__btn"
+										data-view="pub-event">События</button>
+								</div>
+
+
+							</div>
+							<div class="pub-menu-slider__pagination swiper-pagination"></div>
+							<div class="pub-menu-slider__navigation">
+								<div class="pub-menu-slider__nav-prev -ibg">
+									<img src="@img/icon/prev1.svg" alt="">
+								</div>
+								<div class="pub-menu-slider__nav-next -ibg">
+									<img src="@img/icon/next1.svg" alt="">
+								</div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div data-showmore class="block">
+						<div data-showmore-content="460" class="block__content">
+							<!-- ===================== PUBLICATION CARDS =================== -->
+							<ul class="publication-selector__list">
+								<li class="publication-selector__item pub-news">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/2.png" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Новости</a></div>
+											<h5 class="card__title"><a href="#">Сергей Карасев остается в «Зените»</a></h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">Форвард Сергей Карасев (28 лет, 201 см) подписал с нашим
+												клубом новое двухлетнее соглашение.
+												Коренной петербуржец и рекордсмен клуба по числу набранных очков (1965) проведет
+												свой пятый сезон в сине-бело-голубой
+												форме.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">23 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-nterview">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/1.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="@img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Интервью</a></div>
+											<h5 class="card__title"><a href="#">Сергей Карасев – MVP первого матча против
+													«Енисея»</a></h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">Сергей Карасев признан лучшим игроком матча «Зенит» –
+												«Енисей» (104-55) по версии болельщиков. В победном матче против
+												красноярцев форвард сине-бело-голубых набрал 19 очков, совершив 5 точных попаданий
+												из-за дуги. Карасев также добавил 2
+												подбора и 1 перехват.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="card__pub-date">22 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-news">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/2.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Новости</a></div>
+											<h5 class="card__title"><a href="#">Комментарии Сергея Карасева после победы над
+													«Пармой»</a>
+											</h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">
+												Сергей Карасев: Во-первых, хочется сказать огромное спасибо болельщикам, которые
+												пришли и поддержали нас. У нас была
+												такая нелегкая неделя. У нас много новых ребят: хорошо забытые старые бойцы и
+												молодые парни.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">22 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-video">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/3.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Видео</a></div>
+											<h5 class="card__title"><a href="#">Сергей Карасев набрал рекордные в карьере 26
+													очков</a></h5>
+											<div class="card__subtitle">тренировочный лагерь</div>
+
+											<p class="card__description">Сергей Карасев — Х-фактор вчерашней победы в матче против
+												УНИКСА (80-84). Новый карьер-хай 26 очков (7/10 из-за дуги) за
+												25 минут на паркете.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">24 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-article">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/4.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Статьи</a></div>
+											<h5 class="card__title"><a href="#">Как Сергей Карасев привел «Зенит» к победе над
+													«Гурой»</a></h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">Новый тренер, обновлённый состав и пока что всего одна
+												победа в Единой Лиги ВТБ в пяти матчах. Голодная до побед «Зелена
+												Гура» прилетела в Петербург. Путь команды Оливера Видина простым не назовёшь — три
+												часа на автобусе до Берлина, прямой
+												рейс до Москвы и только потом в Петербург.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">23 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-event">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/4.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Статьи</a></div>
+											<h5 class="card__title"><a href="#">Как Сергей Карасев привел «Зенит» к победе над
+													«Гурой»</a></h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">Новый тренер, обновлённый состав и пока что всего одна
+												победа в Единой Лиги ВТБ в пяти матчах. Голодная до побед «Зелена
+												Гура» прилетела в Петербург. Путь команды Оливера Видина простым не назовёшь — три
+												часа на автобусе до Берлина, прямой
+												рейс до Москвы и только потом в Петербург.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">23 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-nterview">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/1.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="@img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Интервью</a></div>
+											<h5 class="card__title"><a href="#">Сергей Карасев – MVP первого матча против
+													«Енисея»</a></h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">Сергей Карасев признан лучшим игроком матча «Зенит» –
+												«Енисей» (104-55) по версии болельщиков. В победном матче против
+												красноярцев форвард сине-бело-голубых набрал 19 очков, совершив 5 точных попаданий
+												из-за дуги. Карасев также добавил 2
+												подбора и 1 перехват.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="card__pub-date">22 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+								<li class="publication-selector__item pub-news">
+									<article class="card">
+										<header class="card__thumb">
+											<a href="#"><img data-src="@img/profile/2.jpg" alt=""></a>
+
+										</header>
+										<div class="card__category-logo">
+											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__body">
+											<div class="card__category"><a href="#">Новости</a></div>
+											<h5 class="card__title"><a href="#">Комментарии Сергея Карасева после победы над
+													«Пармой»</a>
+											</h5>
+											<div class="card__subtitle">Единая Лига ВТБ</div>
+
+											<p class="card__description">
+												Сергей Карасев: Во-первых, хочется сказать огромное спасибо болельщикам, которые
+												пришли и поддержали нас. У нас была
+												такая нелегкая неделя. У нас много новых ребят: хорошо забытые старые бойцы и
+												молодые парни.
+											</p>
+
+										</div>
+										<footer class="card__footer">
+											<span class="date">22 февраля 2023</span>
+										</footer>
+									</article>
+								</li>
+							</ul>
+						</div>
+						<button hidden data-showmore-button type="button" class="block__more publication-selector__btn">
+							<span>Показать еще</span>
+							<span>Скрыть</span></button>
+					</div>
+				</div>
+			</section>
+
+			<!-- === PARTNERS === -->
+
+			<section class="partners-slider__section section-offset diagonal-box bg-one">
+				<div class="section__container partners-slider__box content__box">
+					<h2 class="section-title-h2w partners-slider__title element-animation">партнеры</h2>
+
+					<div class="partners-slider__duo">
+						<a href="#" class="partners-slider__image -ibg">
+							<img class="partners-slider__img" src="@img/partners/rfb-mono.svg" alt="">
+							<img class="partners-slider__img-hover" src="@img/partners/rfb-color.svg" alt="">
+						</a>
+						<a href="#" class="partners-slider__image -ibg">
+							<img class="partners-slider__img" src="@img/partners/vtb-mono.svg" alt="">
+							<img class="partners-slider__img-hover" src="@img/partners/vtb-colour.svg" alt="">
+						</a>
+					</div>
+
+					@@include('html/_partners-slider.htm',{})
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
