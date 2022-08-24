@@ -289,7 +289,9 @@
 	}
 
 	&__site-developer {
+		margin-left: rem(20);
 		@media (max-width: rem(960)) {
+			margin-left: 0;
 		}
 	}
 
