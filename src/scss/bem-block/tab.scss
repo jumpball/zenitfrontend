@@ -1,11 +1,11 @@
 // === TAB ZENIT === //
 
 .tab {
-	// .tab__block
+	// === TAB BLOCK === //
 	&__block {
 	}
 
-	// .tab__nav
+	// === TAB NAV === //
 	&__nav {
 		display: flex;
 		gap: rem(20);
@@ -13,13 +13,13 @@
 			margin-right: rem(30);
 		}
 	}
-
+	// === TAB TITLE === //
 	&__title {
 		margin-top: rem(20);
 		display: inline-flex;
 		background-color: $white;
 		padding: 25px 35px;
-		border-radius: 5px;
+		border-radius: 3px;
 		min-width: 205px;
 		color: $color-zenit;
 		border: rem(1) solid $color-zenit;
@@ -44,14 +44,8 @@
 	}
 
 	&__title-w {
-		//display: inline-flex;
-
-		//++++++++++++//
-		//width: 100%;
-		//++++++++++++//
 		background-color: $color-zenit;
-		//padding: 25px 35px;
-		border-radius: 5px;
+		border-radius: 3px;
 		min-width: 205px;
 		color: $white;
 		border: rem(1) solid $white;
@@ -76,6 +70,33 @@
 		}
 	}
 
+	&__title-w-1 {
+		background-color: $color-zenit;
+		border-radius: 3px;
+		min-width: 205px;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(1160)) {
+			width: 100%;
+			margin-top: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+	// === TAB LINK === //
 	&__link {
 		display: block;
 		line-height: 60px;
@@ -98,12 +119,10 @@
 	}
 
 	&__link-w {
-		//margin-top: rem(20);
 		display: block;
-		//width: 100%;
 		background-color: $color-zenit;
 		padding: 25px 35px;
-		border-radius: 5px;
+		border-radius: rem(3);
 		min-width: 205px;
 		color: $white;
 		border: rem(1) solid $white;
@@ -128,15 +147,45 @@
 		}
 	}
 
+	&__link-w-1 {
+		display: block;
+		background-color: $color-zenit;
+		padding: 25px 35px;
+		border-radius: rem(3);
+		min-width: 205px;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(1160)) {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	// === TAB CONTENT === //
 	&__content {
 	}
 
-	// .tab__body
+	// === TAB BODY === //
 	&__body {
 		padding: 20px 0px 0px 0px;
 	}
 }
 
+// === TAB ACTIVE === //
 ._tab-active {
 	background-color: $color-zenit;
 	color: $white;
@@ -147,6 +196,12 @@
 }
 
 .active.tab__link-w {
+	background-color: $white;
+	color: $mainColor;
+	color: $color-zenit;
+	transition: all 0.3s ease 0s;
+}
+.active.tab__link-w-1 {
 	background-color: $white;
 	color: $mainColor;
 	color: $color-zenit;

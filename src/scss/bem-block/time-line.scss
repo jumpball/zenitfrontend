@@ -1,0 +1,203 @@
+// === TIME-LINE === //
+.timeline {
+	/* The actual timeline (the vertical ruler) */
+	position: relative;
+	margin: 0 auto;
+	@media (max-width: rem(600)) {
+	}
+
+	// === TIME-LINE BOX === //
+	&__box {
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
+	&__box-left {
+		padding: 10px 40px 10px 0px;
+		@media (max-width: rem(600)) {
+			padding: 30px 40px 30px 0px;
+		}
+	}
+	&__box-right {
+		padding: 10px 0px 10px 40px;
+	}
+
+	/* The circles on the timeline */
+	&__box::after {
+		content: "";
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		right: -13px;
+		background-color: $white;
+		border: 6px solid $mainColor;
+		top: 16px;
+		border-radius: 50%;
+		z-index: 1;
+		@media (max-width: rem(600)) {
+		}
+	}
+
+	// === TIME-LINE SIDES === //
+
+	&__left-side {
+		left: 0;
+	}
+	&__left-side::after {
+		@media (max-width: rem(600)) {
+			top: 38px;
+		}
+	}
+	&__left-side::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 20px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid white;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent white;
+		@media (max-width: rem(600)) {
+			top: 40px;
+		}
+	}
+	&__right-side {
+		left: 50%;
+		@media (max-width: rem(600)) {
+			left: 0%;
+		}
+	}
+	&__right-side::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 20px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+	&__right-side::after {
+		left: -13px;
+	}
+	&__left-side::after,
+	&__right-side::after {
+		@media (max-width: rem(600)) {
+			left: 0px;
+		}
+	}
+
+	// === TIME-LINE CONTENT === //
+	&__content {
+		padding: rem(20);
+		background-color: white;
+		position: relative;
+		border-radius: rem(3);
+	}
+	&__content-left {
+	}
+	&__content-right {
+	}
+
+	// === TIME-LINE YEAR === //
+	&__year {
+		position: absolute;
+		@include adaptiveValue("top", -50, -30, 1600, 600, 1);
+		@include adaptiveValue("font-size", 40, 24, 1600, 600, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 600, 1);
+		color: $white;
+		font-weight: 900;
+	}
+	&__year-left {
+		right: 0;
+		//@include adaptiveValue("right", 0, 10, 1600, 600, 1);
+	}
+	&__year-right {
+		left: 0;
+		//@include adaptiveValue("left", 0, 10, 1600, 600, 1);
+	}
+	// === TIME-LINE IMAGE === //
+	&__image {
+		position: absolute;
+		bottom: rem(5);
+		right: rem(10);
+		@include adaptiveValue("height", 90, 60, 1600, 600, 1);
+		@include adaptiveValue("width", 36, 24, 1600, 600, 1);
+		@media (max-width: rem(600)) {
+			//top: calc(90% - 60px);
+		}
+	}
+	&__image-left {
+	}
+	&__image-right {
+	}
+
+	// === TIME-LINE TITLE === //
+	&__title {
+		display: inline-block;
+		@include adaptiveValue("font-size", 24, 20, 1600, 600, 1);
+		@include adaptiveValue("line-height", 30, 24, 1600, 600, 1);
+		font-weight: 700;
+	}
+	&__title-left {
+	}
+
+	// === TIME-LINE SUBTITLE === //
+	&__subtitle {
+		@include adaptiveValue("font-size", 16, 12, 1600, 600, 1);
+		@include adaptiveValue("line-height", 22, 18, 1600, 600, 1);
+		font-weight: 600;
+		padding-left: rem(10);
+		text-transform: uppercase;
+		color: $color-zenit;
+	}
+	&__subtitle-left {
+	}
+
+	// === TIME-LINE TEXT === //
+	&__text {
+		text-align: start;
+		width: 90%;
+		@include adaptiveValue("font-size", 18, 14, 1600, 600, 1);
+		@include adaptiveValue("line-height", 22, 18, 1600, 600, 1);
+	}
+	&__text-left {
+	}
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: rem(6);
+	background-color: $white;
+	border-radius: rem(1);
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+	@media (max-width: rem(600)) {
+		left: 13px;
+	}
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+	/* Full-width timeline__boxs */
+	.timeline__box {
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 0px;
+	}
+
+	/* Make sure that all arrows are pointing timeline__left-sidewards */
+	.timeline__box::before {
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+}

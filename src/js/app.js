@@ -195,7 +195,6 @@ import "./files/script.js";
 import "./files/publication-selector.js";
 import "./files/blog-slider.js";
 import "./files/tabs-slider.js";
-import "./files/table.js";
 import "./files/animation-scroll.js";
 import "./files/timer.js";
 //============================================================================================================================================================================================================================================

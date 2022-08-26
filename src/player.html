@@ -10,10 +10,14 @@
 		<main class="page">
 
 
-
-
-
-
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Команды</a></li>
+					<li><a href="#">Зенит</a></li>
+					<li>Карасев Сергей</li>
+				</ul>
+			</div>
 
 
 			<section class="profile__section section-offset">
@@ -48,40 +52,37 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 				<div class="profile-body diagonal-box bg-one">
 					<div class="section__container content__box">
 						<div class="profile-body__text">
-
 						</div>
-						<div data-tabs="960" data-tabs-animate="1000" class="tabs tab__block profile-body__tabs">
+						<div data-tabs="1160" data-tabs-animate="1000" class="tabs tab__block profile-body__tabs">
 							<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
-								<button type="button" class="tab__title-w _tab-active">
-									<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w active">
+								<button type="button" class="tab__title-w-1 _tab-active">
+									<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w-1 active">
 										статистика
 									</span>
 								</button>
 
-								<button type="button" class="tab__title-w">
-									<span id="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w">
+								<button type="button" class="tab__title-w-1">
+									<span id="#tab_2" data-tab="tab_2" class="b-nav-tab tab__link-w-1">
 										Карта Бросков
 
 									</span>
 								</button>
-								<button type="button" class="tab__title-w">
-									<span id="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w">
+								<button type="button" class="tab__title-w-1">
+									<span id="#tab_3" data-tab="tab_3" class="b-nav-tab tab__link-w-1">
 										Карьера
 									</span>
 								</button>
-								<button type="button" class="tab__title-w">
-									<span id="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w">
+								<button type="button" class="tab__title-w-1">
+									<span id="#tab_4" data-tab="tab_4" class="b-nav-tab tab__link-w-1">
 										Достижения
 									</span>
 								</button>
-								<button type="button" class="tab__title-w">
-									<span id="#tab_5" data-tab="tab_5" class="b-nav-tab tab__link-w">
+								<button type="button" class="tab__title-w-1">
+									<span id="#tab_5" data-tab="tab_5" class="b-nav-tab tab__link-w-1">
 										Фото
 									</span>
 								</button>
@@ -90,7 +91,8 @@
 							<div data-tabs-body class="tabs__content tab__content">
 								<div id="tab_1" class="tabs__body tab__body team-roster__tab-body b-tab active">
 									<h2 class="section-title-h2w element-animation">статистика</h2>
-									@@include('html/_table.htm',{})
+									@@include('html/_table-stats-player.htm',{})
+
 
 								</div>
 								<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
@@ -109,10 +111,10 @@
 								</div>
 								<div id="tab_4" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Достижения</h2>
-
-									<div class="team-box">
+									@@include('html/_time-line.htm',{})
+									<!-- <div class="team-box">
 										Достижения и рекорды
-									</div>
+									</div> -->
 								</div>
 								<div id="tab_5" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">фото</h2>
@@ -124,16 +126,7 @@
 				</div>
 			</section>
 
-
-
-
-
-
-
-
-
-
-			<section class="publication-selector__section">
+			<section class="profile__publications">
 				<div class="section__container">
 					<h2 class="section-title-h2b publication-selector__title element-animation">Публикации</h2>
 					<!-- === PUBLICATION SELECTOR === -->
@@ -186,11 +179,10 @@
 							<ul class="publication-selector__list">
 								<li class="publication-selector__item pub-news">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/2.png" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
+										</div>
+										<div class="card__category-logo -ibg">
 											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
@@ -213,12 +205,11 @@
 								</li>
 								<li class="publication-selector__item pub-nterview">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/1.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="@img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Интервью</a></div>
@@ -241,12 +232,11 @@
 								</li>
 								<li class="publication-selector__item pub-news">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/2.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Новости</a></div>
@@ -270,12 +260,11 @@
 								</li>
 								<li class="publication-selector__item pub-video">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/3.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Видео</a></div>
@@ -296,12 +285,11 @@
 								</li>
 								<li class="publication-selector__item pub-article">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/4.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Статьи</a></div>
@@ -324,12 +312,11 @@
 								</li>
 								<li class="publication-selector__item pub-event">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/4.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Статьи</a></div>
@@ -352,12 +339,11 @@
 								</li>
 								<li class="publication-selector__item pub-nterview">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/1.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="@img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Интервью</a></div>
@@ -380,12 +366,11 @@
 								</li>
 								<li class="publication-selector__item pub-news">
 									<article class="card">
-										<header class="card__thumb">
+										<div class="card__thumb">
 											<a href="#"><img data-src="@img/profile/2.jpg" alt=""></a>
-
-										</header>
-										<div class="card__category-logo">
-											<img class="thead-cell__img" data-src="img/logo/1.png" alt="">
+										</div>
+										<div class="card__category-logo -ibg">
+											<img class="thead-cell__img" src="@img/logo/1.png" alt="">
 										</div>
 										<div class="card__body">
 											<div class="card__category"><a href="#">Новости</a></div>

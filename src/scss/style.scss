@@ -139,6 +139,64 @@ body {
 		min-width: 0;
 	}
 }
+// Страница - хлебные крошки ======================================================================================================================================================================================================================
+
+/* Style the list */
+ul.page__breadcrumb {
+	height: rem(26);
+	overflow: hidden;
+	margin-top: rem(180);
+	padding: 10px 0px 10px 0px;
+	list-style: none;
+	word-wrap: normal;
+	//white-space: nowrap;
+	@media (max-width: $tablet) {
+		margin-top: rem(100);
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		display: -webkit-box;
+		line-clamp: 1;
+		box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+}
+
+/* Display list items side by side */
+ul.page__breadcrumb li {
+	display: inline;
+	font-size: 18px;
+	padding-bottom: rem(10);
+	@media (max-width: $tablet) {
+		font-size: 16px;
+	}
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.page__breadcrumb li + li:before {
+	padding: 8px;
+	color: $mainColor;
+	content: "/\00a0";
+	@media (max-width: $tablet) {
+		padding: 6px;
+	}
+}
+
+/* Add a color to all links inside the list */
+ul.page__breadcrumb li a {
+	color: $color-zenit;
+	text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.page__breadcrumb li a:hover {
+	color: $blue;
+	//text-decoration: underline;
+}
+
 // Секция - отступ, заголовок, маркер ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .section-offset {
 	padding: 50px 0px 0px 0px;
@@ -178,8 +236,6 @@ body {
 	@include adaptiveValue("padding-top", 20, 0, 992, 600, 1);
 	@include adaptiveValue("padding-botom", 20, 10, 992, 600, 1);
 }
-
-// Ограничивающий контейнер ======================================================================================================================================================================================================================
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 

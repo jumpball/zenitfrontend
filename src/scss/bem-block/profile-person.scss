@@ -2,14 +2,24 @@
 .profile {
 	// === PROFILE PERSON SECTION === //
 	&__section {
+		@media (max-width: rem(720)) {
+		}
+	}
+
+	// === PROFILE PUBLICATIONS === //
+	&__publications {
+		margin-bottom: rem(50);
+		@media (max-width: rem(720)) {
+			margin-bottom: rem(30);
+		}
 	}
 }
 
 // === PROFILE HEADER === //
 .profile-header {
-	margin-top: rem(150);
+	//margin-top: rem(150);
 	@media (max-width: $tablet) {
-		margin-top: rem(80);
+		margin-top: rem(20);
 	}
 
 	// === PROFILE HEADER BODY === //
@@ -85,8 +95,8 @@
 		text-transform: uppercase;
 		text-align: start;
 
-		@include adaptiveValue("font-size", 40, 22, 1600, 720, 1);
-		@include adaptiveValue("line-height", 48, 24, 1600, 720, 1);
+		@include adaptiveValue("font-size", 40, 24, 1600, 720, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 720, 1);
 		//@include adaptiveValue("padding-top", 20, 0, 992, 600, 1);
 		//@include adaptiveValue("padding-botom", 20, 10, 992, 600, 1);
 		//background-color: $red_l;
@@ -98,8 +108,9 @@
 		}
 		@media (max-width: rem(720)) {
 			color: $white;
-			font-size: rem(18);
-			font-weight: 600;
+			@include adaptiveValue("font-size", 30, 18, 720, 320, 1);
+			@include adaptiveValue("line-height", 36, 22, 720, 320, 1);
+			@include adaptiveValue("font-weight", 900, 600, 720, 320, 1);
 			text-align: center;
 			padding: 0px 10px 10px 10px;
 		}

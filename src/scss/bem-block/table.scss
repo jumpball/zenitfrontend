@@ -1,217 +1,299 @@
 // === TABLE === //
-.table {
-	// .table__standing
-	&__standing {
-		padding-bottom: rem(50);
-	}
 
-	// .table__wrapper
+.table {
+	// === TABLE WRAPPER === //
 	&__wrapper {
 		max-width: 1570px;
 		position: relative;
+		border-radius: rem(3);
+	}
+	&__wrapper-light {
+		border: rem(1) solid $white;
 	}
 
-	// .table__title
-	&__title {
+	&__wrapper-dark {
+		border: 1px solid rgba(113, 166, 220, 0.2);
+	}
+
+	// === TABLE BOX === //
+	&__box {
+		position: relative;
+		//display: block;
+		width: 100%;
+		overflow-x: auto;
+	}
+	&__box-1 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 11;
-		width: 270px;
-		height: 60px;
-		color: $white;
-		font-weight: 500;
-		text-transform: uppercase;
-		background-color: $color-zenit;
-		border-right: 1px solid $bgColor_2;
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		column-gap: 5px;
-		padding: 10px;
-		@media (max-width: 600px) {
-			width: 60px;
+		//position: relative;
+		//display: block;
+		//width: auto;
+		overflow: hidden;
+	}
+	// === TABLE COL - HIDDEN === //
+	&__col-hide {
+		@media (max-width: em(720)) {
+			display: none;
 		}
 	}
 
-	// .table__box
-	&__box {
-	}
+	// === TABLE COL - WIDTH === //
 
-	// .table__header
+	&__col-s {
+		min-width: rem(62);
+	}
+	&__col-s-fix {
+		width: rem(62);
+	}
+	&__col-m {
+		min-width: rem(95);
+	}
+	&__col-m-fix {
+		width: rem(95);
+	}
+	&__col-ml {
+		min-width: rem(122);
+	}
+	&__col-ml-fix {
+		width: rem(122);
+	}
+	&__col-l {
+		min-width: rem(166);
+	}
+	&__col-l-fix {
+		width: rem(166);
+	}
+	&__col-xl {
+		min-width: rem(245);
+	}
+	&__col-xl-fix {
+		width: rem(245);
+	}
+	// === TABLE HEADER === //
 	&__header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		height: 68px;
+		background-color: $mainColor;
+		color: #d5dde5;
+		font-size: 20px;
+		text-transform: uppercase;
+		font-weight: 100;
+		text-align: left;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: flex-start;
+		justify-content: start;
 	}
 
-	// .table__fix-col
-	&__fix-col {
+	// === TABLE HEADER-COL === //
+	&__header-col {
+		//border-right: rem(1) solid $gray-dark;
+		border-right: 1px solid rgba(113, 166, 220, 0.2);
 	}
-	&__fix-col tr {
+	&__header-col-logo {
+		height: rem(68);
+		width: rem(62);
+		padding: 15px 10px 16px 10px;
 	}
-
-	// .table__body
-	&__body tr {
-		background-color: $white;
-		transition: all 0.125s ease-in-out;
-		border-right: 1px solid $bgColor_2;
-
-		&:nth-child(2n-1) {
-			background-color: $bgColor_2;
-		}
-
-		&:hover {
-			background-color: rgba(133, 194, 241, 0.3);
-		}
-	}
-	// .table__link
-	&__link {
+	&__header-col-text {
+		height: rem(68);
+		padding: rem(24);
 	}
 
-	// .table__img
-	&__img {
+	&__header-col-1 {
+	}
+	&__header-col-2 {
 	}
 
-	// .table__img
+	// === TABLE BODY-COL === //
+	&__body-col {
+	}
+	&__body-col-logo {
+		height: rem(59);
+		width: rem(62);
+		padding: 9px 10px 10px 10px;
+	}
+	&__body-col-team {
+		height: rem(59);
+		width: rem(245);
+		padding: rem(20);
+	}
+	&__body-col-text {
+		height: rem(59);
+		padding: rem(20);
+	}
+	&__body-col-1 {
+	}
+	&__body-col-2 {
+	}
 
-	&__row {
+	// === TABLE IMAGE === //
+
+	&__image {
+		//position: relative;
+		width: rem(40);
+		height: rem(40);
+	}
+
+	// === TABLE ICONS === //
+
+	&__icons-list {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		gap: rem(3);
 	}
-	&__circle-blue {
+	&__icon-item {
 		width: rem(18);
 		height: rem(18);
-		background-color: $blue;
-		border-radius: rem(50);
-	}
-	&__circle-red {
-		width: rem(18);
-		height: rem(18);
-		background-color: $red;
-		border-radius: rem(50);
-	}
-
-	// .table__text
-	&__text {
 	}
 }
-// === THEAD CELL === //
-.thead-cell {
-	width: 270px;
-	display: flex;
-	align-items: center;
-	justify-content: start;
-	text-align: start;
-	column-gap: rem(5);
-	text-transform: uppercase;
-	font-size: rem(14);
-	@media (max-width: 600px) {
-		width: 60px;
-	}
-	&__img {
-		width: 40px;
-		height: 40px;
-	}
-	&__text {
-		line-height: 40px;
-		@media (max-width: 600px) {
-			display: none;
-		}
-	}
 
-	// .thead-cell__link
-	&__link {
-	}
-}
-// === THEAD ITEM === //
-.thead-item {
-	min-width: 130px;
-	height: 60px;
-	box-sizing: border-box;
-}
+// === BASIC TABLE STYLES === //
 
-// === TABLE SCROLL === //
-.table-scroll {
-	color: $mainColor;
+.table-fill {
+	background: $white;
+	border-collapse: collapse;
+	margin: auto;
+	padding: 5px;
 	width: 100%;
-	height: auto;
-
-	@media (max-width: 1600px) {
-		overflow-x: scroll;
-	}
-	@media (max-width: 600px) {
-		height: 300px;
-		overflow: scroll;
-	}
-
-	table {
-		position: relative;
-		border-collapse: collapse;
-		table-layout: fixed;
-		text-align: center;
-	}
-	.thead-col {
-		position: absolute;
-		margin-top: 60px;
-		z-index: 9;
-	}
-
-	.thead-col tr {
-		left: 0;
-		border-right: 1px solid $color-zenit;
-		border-left: 1px solid $bgColor_2;
-
-		background-color: $white;
-		transition: all 0.125s ease-in-out;
-		&:nth-child(2n-1) {
-			background-color: $bgColor_2;
-		}
-	}
-
-	.thead-row {
-		position: absolute;
-		margin-left: 270px;
-		z-index: 10;
-		background-color: $color-zenit;
-		@media (max-width: 600px) {
-			margin-left: 60px;
-		}
-	}
-	.thead-row tr {
-	}
-	.thead-row th {
-		color: $white;
-		font-size: 16px;
-		text-transform: uppercase;
-		padding: 18px 12px;
-	}
-
-	tbody {
-		display: block;
-		margin-left: 270px;
-		margin-top: 60px;
-		@media (max-width: 600px) {
-			margin-left: 60px;
-		}
-	}
-	//th,
-	td {
-		min-width: 130px;
-
-		line-height: 40px;
-		box-sizing: border-box;
-		padding: 12px;
-	}
+	//box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	animation: float 5s infinite;
 }
-
-// === BASIC TABLE OPTIONS === //
-
-td,
-th {
-	padding: 12px;
+.table-fill-1 {
+	background: $white;
+	border-collapse: collapse;
+	margin-right: auto;
+	padding: 5px;
+	//width: 100%;
+	//box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	animation: float 5s infinite;
 }
 th {
-	font-weight: 500;
-	color: $mainColor;
+	color: #d5dde5;
+	background-color: $mainColor;
+	border-bottom: rem(4) solid $gray;
+	border-right: 1px solid rgba(113, 166, 220, 0.2);
+	//border-right: rem(1) solid $gray;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 100;
+	padding: 24px;
+	text-align: left;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
 	white-space: nowrap;
+}
+
+th:first-child {
+	//border-top-left-radius: rem(3);
+}
+
+th:last-child {
+	//border-top-right-radius: rem(3);
+	border-right: none;
+}
+
+tr {
+	//border-top: rem(1) solid #c1c3d1;
+	//border-bottom: 1px solid #c1c3d1;
+
+	border-top: rem(1) solid transparent;
+	border-bottom: rem(1) solid transparent;
+
+	//color: #666b85;
+	background-color: $mainColor;
+	font-size: 16px;
+	font-weight: normal;
+	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tbody tr:hover td {
+	//background-color: rgba(133, 194, 241, 0.1);
+	//background-color: #4e5066;
+	background-color: $gray;
+	color: $white;
+	border-top: rem(1) solid transparent;
+}
+
+tr:first-child {
+	border-top: none;
+}
+
+tr:last-child {
+	border-bottom: none;
+}
+
+tbody tr:nth-child(odd) td {
+	//background: #ebebeb;
+	background-color: $bgColor_2;
+}
+
+tbody tr:nth-child(odd):hover td {
+	//background: #4e5066;
+	//background-color: $color-zenit;
+	background-color: $gray;
+}
+
+tr:last-child td:first-child {
+	//border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+	//border-bottom-right-radius: 3px;
+}
+
+td {
+	background: #ffffff;
+	padding: 20px;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 18px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+	//border-right: rem(1) solid $bgColor_2;
+
+	border-right: 1px solid rgba(113, 166, 220, 0.2);
+}
+
+td:last-child {
+	border-right: 0px;
+}
+
+th.text-left {
+	text-align: left;
+}
+
+th.text-center {
+	text-align: center;
+}
+
+th.text-right {
+	text-align: right;
+}
+
+td.text-left {
+	text-align: left;
+}
+
+td.text-center {
+	text-align: center;
+}
+
+td.text-right {
+	text-align: right;
+}
+
+td.table-footer {
+	border-top: 1px solid rgba(113, 166, 220, 0.2);
+	background-color: $white;
+	color: $mainColor;
+	font-weight: 500;
+	padding: 24px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
 }

@@ -12,7 +12,3 @@ document.querySelector(".publication-selector__menu").addEventListener("click", 
 		}
 	});
 });
-
-
-
-// ================== PUBLICATIONS SELECTOR ============================ //
