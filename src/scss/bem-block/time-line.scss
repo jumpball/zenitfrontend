@@ -42,6 +42,11 @@
 
 	&__left-side {
 		left: 0;
+		@media (max-width: rem(600)) {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
+		}
 	}
 	&__left-side::after {
 		@media (max-width: rem(600)) {
@@ -61,12 +66,19 @@
 		border-color: transparent transparent transparent white;
 		@media (max-width: rem(600)) {
 			top: 40px;
+			left: 30px;
+			border: medium solid white;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent white transparent transparent;
 		}
 	}
 	&__right-side {
 		left: 50%;
 		@media (max-width: rem(600)) {
 			left: 0%;
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
 		}
 	}
 	&__right-side::before {
@@ -181,23 +193,5 @@
 	margin-left: -3px;
 	@media (max-width: rem(600)) {
 		left: 13px;
-	}
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-	/* Full-width timeline__boxs */
-	.timeline__box {
-		width: 100%;
-		padding-left: 40px;
-		padding-right: 0px;
-	}
-
-	/* Make sure that all arrows are pointing timeline__left-sidewards */
-	.timeline__box::before {
-		left: 30px;
-		border: medium solid white;
-		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
 	}
 }
