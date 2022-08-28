@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div data-sticky class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Публикации</a></li>
+					<li><a href="#">Интервью</a></li>
+					<li>Чави Паскуал: «Сейчас у нас есть только имена, и нам нужно сделать что-то большое»</li>
+				</ul>
+			</div>
+
+			<div class="publication__content"></div>
+
+			<div data-watch-threshold="0.2" data-watch class="publication__title-box">
+				<!-- <h2 class="section-title-h2 publication__title">Большое интервью Чави Паскуаля</h2> -->
+			</div>
+
+			<div class="publication__content"></div>
+
+
+			<!-- <section class="profile__section section-offset">
+				<div class="section__container">
+
+
+				</div>
+				<div class="profile-body diagonal-box bg-one">
+					<div class="section__container content__box">
+
+
+					</div>
+				</div>
+			</section> -->
+			<!-- === PARTNERS === -->
+			<section class="partners-slider__section section-offset diagonal-box bg-one">
+				<div class="section__container partners-slider__box content__box">
+					<h2 class="section-title-h2w partners-slider__title element-animation">партнеры</h2>
+
+					<div class="partners-slider__duo">
+						<a href="#" class="partners-slider__image -ibg">
+							<img class="partners-slider__img" src="@img/partners/rfb-mono.svg" alt="">
+							<img class="partners-slider__img-hover" src="@img/partners/rfb-color.svg" alt="">
+						</a>
+						<a href="#" class="partners-slider__image -ibg">
+							<img class="partners-slider__img" src="@img/partners/vtb-mono.svg" alt="">
+							<img class="partners-slider__img-hover" src="@img/partners/vtb-colour.svg" alt="">
+						</a>
+					</div>
+
+					@@include('html/_partners-slider.htm',{})
+				</div>
+			</section>
+
+
+			<div class="section__container publication__selector-hidden">
+				@@include('html/_publication-selector.htm',{})
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

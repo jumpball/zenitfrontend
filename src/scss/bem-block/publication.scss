@@ -1,0 +1,42 @@
+// === PUBLICATION === //
+.publication {
+	// === PUBLICATION TITLE === //
+	&__title-box {
+	}
+	&____title-box._watcher-view {
+	}
+
+	&__title {
+		font-size: rem(50);
+		font-weight: 900;
+		color: $mainColor;
+	}
+
+	// === PUBLICATION CONTENT === //
+	&__content {
+		position: relative;
+
+		height: rem(800);
+		width: 100%;
+		margin: rem(200);
+		background-color: $bgColor_1;
+	}
+	// === PUBLICATION SELECTOR HIDDEN === //
+	&__selector-hidden {
+		display: none;
+	}
+}
+
+.publication__title-box {
+	background-color: #18b5a4;
+	width: rem(200);
+	height: rem(200);
+	transition: all 2s ease 0s;
+	left: -100%;
+}
+
+.publication__title-box._watcher-view {
+	background-color: #69b518;
+	transform: translate(200%, -10%);
+	transition: all 2s ease 0s;
+}
