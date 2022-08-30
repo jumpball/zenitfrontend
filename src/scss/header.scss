@@ -61,6 +61,11 @@
 	// === HEADER FORM === //
 	&__form {
 		transition: all 0.8s ease 0s;
+		.select__title {
+			background-color: $mainColor;
+			border: none;
+			height: auto;
+		}
 	}
 	&._header-scroll &__form {
 		@media (min-width: $tablet) {
@@ -71,6 +76,7 @@
 
 	&__form-select-lang {
 		position: relative;
+
 		width: rem(40);
 		height: rem(40);
 		margin: 0px 0px 0px rem(30);

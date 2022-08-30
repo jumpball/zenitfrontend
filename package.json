@@ -70,6 +70,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"chart.js": "^3.9.1",
 		"simplebar": "latest"
 	}
 }
