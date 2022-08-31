@@ -15,6 +15,16 @@
 			gap: rem(10);
 		}
 	}
+	&__form-1 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 40, 20, 991.98, 650, 1);
+		@media (max-width: rem(480)) {
+			flex-direction: column;
+			gap: rem(10);
+		}
+	}
 	// === PERSON-STATS BOX=== //
 	&__box {
 		width: 100%;
@@ -58,10 +68,12 @@
 		border: rem(1) solid $white;
 		border-radius: rem(3);
 		width: 100%;
+		position: relative;
 		//height: rem(40);
 		background-color: $white;
 		cursor: pointer;
-		color: inherit;
+		//color: inherit;
+		color: $color-zenit;
 		text-align: left;
 	}
 	// Значение в заголовке
@@ -80,14 +92,25 @@
 		}
 		&:after {
 			content: "";
-			align-self: stretch;
-			flex: 0 0 10px;
-			transition: all 0.3s ease 0s;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			// align-self: stretch;
+			// flex: 0 0 10px;
+			// transition: all 0.3s ease 0s;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			position: absolute;
+			top: rem(15);
+			right: rem(10);
+			height: 0;
+			width: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 10px solid $color-zenit;
+			transition: transform 0.5s ease 0s;
+
 			._select-open & {
 				transform: rotate(-180deg);
+				transition: transform 0.5s ease 0s;
 			}
 		}
 		&._select-pseudo-label {
@@ -152,7 +175,7 @@
 		width: 100%;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 12px;
+		padding: 8px 12px;
 		color: inherit;
 		&._select-selected {
 			background-color: #eee;

@@ -9,7 +9,7 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-
+			<!-- BREADCRUMS -->
 			<div class="section__container">
 				<ul class="page__breadcrumb">
 					<li><a href="#">Главная</a></li>
@@ -19,10 +19,9 @@
 				</ul>
 			</div>
 
-
+			<!-- PROFILE HEADER -->
 			<section class="profile__section section-offset">
 				<div class="section__container">
-
 					<div class="profile-header">
 						<div class="profile-header__body">
 							<img class="profile-header__bg-logo" src="@img/logo/Zenit-logo-bc-tr.svg" alt="">
@@ -53,11 +52,13 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- PROFILE BODY -->
 				<div class="profile-body diagonal-box bg-one">
 					<div class="section__container content__box">
-						<div class="profile-body__text">
-						</div>
+
 						<div data-tabs="1160" data-tabs-animate="1000" class="tabs tab__block profile-body__tabs">
+							<!-- PROFILE MENU TABS -->
 							<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
 								<button type="button" class="tab__title-w-1 _tab-active">
 									<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w-1 active">
@@ -88,13 +89,65 @@
 								</button>
 
 							</nav>
+							<div class="profile-body__text"></div>
 							<div data-tabs-body class="tabs__content tab__content">
+								<!-- PROFILE STATS -->
 								<div id="tab_1" class="tabs__body tab__body team-roster__tab-body b-tab active">
 									<h2 class="section-title-h2w element-animation">статистика</h2>
+
+									<div data-spollers="650,max" class="person-stats-chart__spollers">
+										<div class="person-stats-chart__spollers-item">
+											<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
+											<div class="person-stats-chart__spollers-body">
+												<div class="person-stats__nav">
+													<form action="#" class="person-stats__form">
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-season-1">выбрать
+																сезон</label>
+															<select data-label data-scroll data-show name="form[]" id="select-season-1"
+																class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">
+																	все сезоны</option>
+																<option class="person-stats__item" value="2">2021/2022</option>
+																<option class="person-stats__item" value="3">2020/2021</option>
+																<option class="person-stats__item" value="4">2019/2020</option>
+																<option class="person-stats__item" value="5">2018/2019</option>
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-tournament-1">выбрать
+																турнир</label>
+															<select data-label data-scroll data-show name="form[]"
+																id="select-tournament-1" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">все
+																	турниры</option>
+																<option class="person-stats__item" value="2">Единая Лига ВТБ</option>
+																<option class="person-stats__item" value="3">Евролига</option>
+
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="type-stats-1">тип
+																статистики</label>
+															<select data-label data-scroll data-show name="form[]" id="type-stats-1"
+																class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">в
+																	среднем</option>
+																<option data-label class="person-stats__item" value="2">всего</option>
+															</select>
+														</div>
+
+													</form>
+
+												</div>
+											</div>
+										</div>
+									</div>
 									@@include('html/_table-stats-player.htm',{})
 
 
 								</div>
+								<!-- PROFILE SHOTING MAP -->
 								<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карта бросков</h2>
 
@@ -109,8 +162,48 @@
 
 
 									@@include('html/_shoting-map.htm',{})
+									<div data-spollers="480,max" class="person-stats-chart__spollers">
+										<div class="person-stats-chart__spollers-item">
+											<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
+											<div class="person-stats-chart__spollers-body">
+												<div class="person-stats__nav">
+													<form action="#" class="person-stats__form-1">
+
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-team">выбрать
+																соперника</label>
+															<select data-label data-scroll data-show name="form[]" id="select-team"
+																class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">все
+																	команды</option>
+																<option class="person-stats__item" value="2">ЦСКА</option>
+																<option class="person-stats__item" value="3">Локомотив Кубань</option>
+																<option class="person-stats__item" value="4">Уникс</option>
+																<option class="person-stats__item" value="5">Пари Парма</option>
+																<option class="person-stats__item" value="6">Самара</option>
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="type-stats">показать</label>
+															<select data-label data-scroll data-show name="form[]" id="type-stats"
+																class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">
+																	последние 5 игр</option>
+																<option data-label class="person-stats__item" value="2">последние 10 игр
+																</option>
+																<option data-label class="person-stats__item" value="3">все игры
+																</option>
+															</select>
+														</div>
+
+													</form>
+
+												</div>
+											</div>
+										</div>
+									</div>
 									<div data-showmore class="block">
-										<div data-showmore-content="290" class="block__content">
+										<div data-showmore-content="255" class="block__content">
 											<div class="person-stats-chart__table">
 												<div class="table__box">
 													<table class="table-fill">
@@ -275,6 +368,7 @@
 											<span>Скрыть</span></button>
 									</div>
 								</div>
+								<!-- PROFILE CAREER -->
 								<div id="tab_3" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карьера</h2>
 
@@ -406,6 +500,7 @@
 										Карьера и Биография
 									</div> -->
 								</div>
+								<!-- PROFILE ARHIEVEMENTS -->
 								<div id="tab_4" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Достижения</h2>
 									@@include('html/_time-line.htm',{})
@@ -414,9 +509,11 @@
 									</div> -->
 
 								</div>
+								<!-- PROFILE PHOTO -->
 								<div id="tab_5" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">фото</h2>
-									@@include('html/_team-slider.htm',{})
+
+
 								</div>
 							</div>
 						</div>

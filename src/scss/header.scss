@@ -93,6 +93,15 @@
 			margin: 0px rem(60) 0px 0px;
 		}
 	}
+	&__form-select-lang {
+		.select__value::after {
+			border: none;
+		}
+		.select__title {
+			color: $white;
+		}
+	}
+
 	&._header-scroll &__form-select-lang {
 		transform: none;
 		//transition: all 0.8s ease 0s;

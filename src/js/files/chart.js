@@ -10,12 +10,12 @@ const jsChart1Y = {
 	labels: "% 2-х очковых",
 	data: [55.6, 44.4], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
-	borderWidth: 2, // Толщина границ
+	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'rgb(255, 205, 86)',
+		'#fec42f',
 		'#ffffff'
 	],// Цвет фона
-	hoverOffset: 5,
+	//hoverOffset: 5,
 };
 
 if ($jsChart1)
@@ -30,13 +30,13 @@ if ($jsChart1)
 			]
 		},
 		options: {
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
-					}
-				}],
-			},
+			// scales: {
+			// 	yAxes: [{
+			// 		ticks: {
+			// 			beginAtZero: true
+			// 		}
+			// 	}],
+			// },
 		}
 	});
 
@@ -50,12 +50,12 @@ const jsChart2Y = {
 	labels: "% 3-х очковых",
 	data: [37.9, 62.1], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
-	borderWidth: 2, // Толщина границ
+	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'rgb(255, 205, 86)',
+		'#fec42f',
 		'#ffffff'
 	],// Цвет фона
-	hoverOffset: 5,
+	//hoverOffset: 5,
 };
 
 if ($jsChart2)
@@ -70,13 +70,13 @@ if ($jsChart2)
 			]
 		},
 		options: {
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
-					}
-				}],
-			},
+			// scales: {
+			// 	yAxes: [{
+			// 		ticks: {
+			// 			beginAtZero: true
+			// 		}
+			// 	}],
+			// },
 		}
 	});
 
@@ -90,12 +90,12 @@ const jsChart3Y = {
 	labels: "% штрафных",
 	data: [79.5, 21.5], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
-	borderWidth: 2, // Толщина границ
+	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'rgb(255, 205, 86)',
+		'#fec42f',
 		'#ffffff'
 	],// Цвет фона
-	hoverOffset: 5,
+	//hoverOffset: 5,
 };
 
 if ($jsChart3)
@@ -110,13 +110,13 @@ if ($jsChart3)
 			]
 		},
 		options: {
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
-					}
-				}],
-			},
+			// scales: {
+			// 	yAxes: [{
+			// 		ticks: {
+			// 			beginAtZero: true
+			// 		}
+			// 	}],
+			// },
 		}
 	});
 

@@ -3,12 +3,9 @@
 .person-stats-chart {
 	// === STATS CHART BODY === //
 	&__body {
+		position: relative;
 		display: flex;
 		@include adaptiveValue("gap", 20, 10, 1600, 991.98, 1);
-
-		//gap: rem(20);
-		//align-items: center;
-		//justify-content: space-between;
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
@@ -16,7 +13,6 @@
 	// === STATS CHART SPOLLERS === //
 	&__spollers {
 		display: grid;
-		gap: 15px;
 	}
 
 	&__spollers-item {
@@ -28,54 +24,49 @@
 		cursor: default;
 		text-align: left;
 		position: relative;
-		@media (max-width: rem(650)) {
-			border: 1px solid $white;
-			padding: rem(20) rem(15);
-			border-radius: rem(3) rem(3) 0px 0px;
-		}
 		._spoller-init & {
 			cursor: pointer;
-			&::before,
+			border: 1px solid $white;
+			padding: rem(20) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
 			&::after {
 				content: "";
 				position: absolute;
-				right: 10px;
-				top: 50%;
-				background-color: $white;
-				height: 2px;
-				width: 15px;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $white;
 				transition: transform 0.5s ease 0s;
 			}
-			&::before {
-				transform: translate(-75%, -50%) rotate(40deg);
-			}
+			// &::before {
+			// 	left: rem(12);
+			// }
 			&::after {
-				transform: translate(0, -50%) rotate(-40deg);
+				right: rem(12);
 			}
 			&._spoller-active {
 				&::before {
-					transform: translateX(-75%) rotate(-40deg);
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
 				}
 				&::after {
-					transform: rotate(40deg);
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
 				}
 			}
 		}
 	}
 
 	&__spollers-body {
-		@media (max-width: rem(650)) {
-			//position: relative;
-			//padding: rem(20) ;
-			//padding: 0px 0px 0px 0px;
-			//border-radius: rem(3);
-			//border: 1px solid $white;
-		}
 	}
 	// === STATS CHART TABLE === //
 	&__table {
 		position: relative;
-		margin-top: rem(40);
+		//margin-top: rem(40);
 		//display: block;
 		//max-width: rem(900);
 		width: 100%;
@@ -89,10 +80,10 @@
 	// === STATS CHART BG-LOGO === //
 	&__bg-logo {
 		position: absolute;
-		@include adaptiveValue("top", 670, 640, 1600, 991.98, 1);
-		@include adaptiveValue("right", 200, 100, 1600, 991.98, 1);
-		@include adaptiveValue("width", 600, 400, 1600, 991.98, 1);
-		@include adaptiveValue("height", 286, 191, 1600, 991.98, 1);
+		@include adaptiveValue("top", 320, 200, 1600, 991.98, 1);
+		@include adaptiveValue("right", 160, 100, 1600, 991.98, 1);
+		@include adaptiveValue("width", 546, 336, 1600, 991.98, 1);
+		@include adaptiveValue("height", 260, 160, 1600, 991.98, 1);
 		@media (max-width: $tablet) {
 			display: none;
 		}
@@ -100,7 +91,7 @@
 	// === STATS CHART CONTENT === //
 	&__content {
 		position: relative;
-		align-self: flex-start;
+		align-self: flex-end;
 		flex: 1 1 auto;
 		margin: 0 auto;
 		@media (max-width: $mobile) {
@@ -119,25 +110,26 @@
 		}
 		@media (max-width: $mobile) {
 			flex-direction: row;
+
+			margin: 0px 0px 20px 0px;
 		}
-		@media (max-width: rem(520)) {
+		@media (max-width: rem(410)) {
 			flex-direction: column;
 		}
 	}
 
 	&__item {
 		position: relative;
-		//padding: 0px 0px 20px 0px;
-		//flex: 1 1 rem(200);
+		padding: 0px 0px 6px 0px;
 		@include adaptiveValue("width", 300, 178, 1600, 991.98, 1);
 		@media (max-width: $tablet) {
 			@include adaptiveValue("width", 200, 160, 991.98, 767.98, 1);
 		}
 		@media (max-width: $mobile) {
-			@include adaptiveValue("width", 240, 156, 767.98, 520, 1);
+			@include adaptiveValue("width", 240, 122, 767.98, 410, 1);
 		}
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("width", 470, 270, 520, 320, 1);
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("width", 360, 270, 410, 320, 1);
 		}
 	}
 
@@ -157,8 +149,11 @@
 		font-weight: 900;
 		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 60, 30, 520, 320, 1);
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
 		}
 	}
 	&__stats-2pt::before {
@@ -169,9 +164,13 @@
 		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
 		left: 0;
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("top", -20, -16, 520, 320, 1);
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
 		}
 	}
 
@@ -183,9 +182,9 @@
 		position: absolute;
 		@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
 		left: 0;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("bottom", -20, -16, 520, 320, 1);
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
 		}
 	}
 
@@ -193,8 +192,11 @@
 		font-weight: 900;
 		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 60, 30, 520, 320, 1);
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
 		}
 	}
 	&__stats-3pt::before {
@@ -205,9 +207,13 @@
 		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
 		left: 0;
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("top", -20, -16, 520, 320, 1);
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
 		}
 	}
 	&__stats-3pt::after {
@@ -218,9 +224,9 @@
 		position: absolute;
 		@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
 		left: 0;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("bottom", -20, -16, 520, 320, 1);
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
 		}
 	}
 
@@ -228,21 +234,30 @@
 		font-weight: 900;
 		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 60, 30, 520, 320, 1);
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
 		}
 	}
 	&__stats-ft::before {
-		content: "штрафные";
+		content: "шт";
 		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
 		font-weight: 500;
 		position: absolute;
 		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
 		left: 0;
 		width: 100%;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("top", -20, -16, 520, 320, 1);
+
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
 		}
 	}
 	&__stats-ft::after {
@@ -253,9 +268,9 @@
 		position: absolute;
 		@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
 		left: 0;
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("font-size", 24, 16, 520, 320, 1);
-			@include adaptiveValue("bottom", -20, -16, 520, 320, 1);
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
 		}
 	}
 
@@ -266,16 +281,12 @@
 		@include adaptiveValue("width", 650, 400, 1600, 991.98, 1);
 		min-width: rem(400);
 		height: auto;
-		//box-shadow: $shadow-1;
 		overflow: hidden;
+		background-color: $color-zenit;
 		@media (max-width: $tablet) {
 			align-self: flex-start;
 			width: 100%;
-			//@include adaptiveValue("width", 700, 400, 991.98, 600, 1);
 			flex: 1, 1, auto;
-		}
-		@media (max-width: rem(520)) {
-			@include adaptiveValue("width", 470, 272, 520, 320, 1);
 			min-width: rem(272);
 		}
 	}
@@ -293,8 +304,8 @@
 
 	// === STATS CHART SVG PART === //
 	&__part-corner {
-		fill: rgb(255, 205, 86);
-		opacity: 0.1;
+		fill: $white;
+		opacity: 0.5;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -306,8 +317,8 @@
 	}
 
 	&__part-short-corner {
-		fill: rgb(255, 205, 86);
-		opacity: 0.2;
+		fill: $white;
+		opacity: 0.3;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -318,8 +329,8 @@
 		}
 	}
 	&__part-short-wing {
-		fill: rgb(255, 205, 86);
-		opacity: 0.1;
+		fill: $white;
+		opacity: 0.5;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -330,8 +341,8 @@
 		}
 	}
 	&__part-3pt-wing {
-		fill: rgb(255, 205, 86);
-		opacity: 0.2;
+		fill: $white;
+		opacity: 0.3;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -342,8 +353,8 @@
 		}
 	}
 	&__part-3pt-top {
-		fill: rgb(255, 205, 86);
-		opacity: 0.1;
+		fill: $white;
+		opacity: 0.5;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -354,8 +365,8 @@
 		}
 	}
 	&__part-top {
-		fill: rgb(255, 205, 86);
-		opacity: 0.2;
+		fill: $white;
+		opacity: 0.3;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;
@@ -366,8 +377,8 @@
 		}
 	}
 	&__part-paint {
-		fill: rgb(255, 205, 86);
-		opacity: 0.3;
+		fill: $white;
+		opacity: 0.5;
 		@media (any-hover: hover) {
 			&:hover {
 				transition: opacity 0.2s ease;

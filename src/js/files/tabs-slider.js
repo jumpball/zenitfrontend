@@ -29,6 +29,7 @@ function Tabs() {
 
 var connectTabs = new Tabs();
 
+
 var swiper = new Swiper('.team-slider', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
