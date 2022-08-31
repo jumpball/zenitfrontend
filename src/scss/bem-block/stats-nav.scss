@@ -9,7 +9,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: rem(40);
+		@include adaptiveValue("gap", 40, 20, 991.98, 650, 1);
+		@media (max-width: rem(650)) {
+			flex-direction: column;
+			gap: rem(10);
+		}
 	}
 	// === PERSON-STATS BOX=== //
 	&__box {

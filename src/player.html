@@ -97,13 +97,183 @@
 								</div>
 								<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карта бросков</h2>
-									@@include('html/_stats-nav.htm',{})
+
+									<div data-spollers="650,max" class="person-stats-chart__spollers">
+										<div class="person-stats-chart__spollers-item">
+											<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
+											<div class="person-stats-chart__spollers-body">
+												@@include('html/_stats-nav.htm',{})
+											</div>
+										</div>
+									</div>
+
+
 									@@include('html/_shoting-map.htm',{})
+									<div data-showmore class="block">
+										<div data-showmore-content="290" class="block__content">
+											<div class="person-stats-chart__table">
+												<div class="table__box">
+													<table class="table-fill">
+														<thead>
+															<tr>
+																<th class="text-left table__col-sm-fix">дата</th>
+																<th class="text-left table__col-xl table__col-xl-fix">соперник</th>
+																<th class="text-center table__col-s">2-очк</th>
+																<th class="text-center table__col-s">%</th>
+																<th class="text-center table__col-s">3-очк</th>
+																<th class="text-center table__col-s">%</th>
+																<th class="text-center table__col-s">шт</th>
+																<th class="text-center table__col-s">%</th>
+																<th class="text-center table__col-s">мин</th>
+																<th class="text-center table__col-s">очки</th>
+															</tr>
+														</thead>
+														<tbody class="table-hover">
 
-									<!-- <div class="team-box">
-										Карта бросков
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl table__col-xl-fix">Локомотив Кубань
+																</td>
+																<td class="text-center table__col-s">4/10</td>
+																<td class="text-center table__col-s">40%</td>
+																<td class="text-center table__col-s">3/8</td>
+																<td class="text-center table__col-s">39.8%</td>
+																<td class="text-center table__col-s">6/7</td>
+																<td class="text-center table__col-s">79.6%</td>
+																<td class="text-center table__col-s">26:32</td>
+																<td class="text-center table__col-s">23</td>
+															</tr>
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl table__col-xl-fix">Локомотив Кубань
+																</td>
+																<td class="text-center table__col-s">4/10</td>
+																<td class="text-center table__col-s">40%</td>
+																<td class="text-center table__col-s">3/8</td>
+																<td class="text-center table__col-s">39.8%</td>
+																<td class="text-center table__col-s">6/7</td>
+																<td class="text-center table__col-s">79.6%</td>
+																<td class="text-center table__col-s">26:32</td>
+																<td class="text-center table__col-s">23</td>
+															</tr>
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl table__col-xl-fix">Локомотив Кубань
+																</td>
+																<td class="text-center table__col-s">4/10</td>
+																<td class="text-center table__col-s">40%</td>
+																<td class="text-center table__col-s">3/8</td>
+																<td class="text-center table__col-s">39.8%</td>
+																<td class="text-center table__col-s">6/7</td>
+																<td class="text-center table__col-s">79.6%</td>
+																<td class="text-center table__col-s">26:32</td>
+																<td class="text-center table__col-s">23</td>
+															</tr>
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl table__col-xl-fix">Локомотив Кубань
+																</td>
+																<td class="text-center table__col-s">4/10</td>
+																<td class="text-center table__col-s">40%</td>
+																<td class="text-center table__col-s">3/8</td>
+																<td class="text-center table__col-s">39.8%</td>
+																<td class="text-center table__col-s">6/7</td>
+																<td class="text-center table__col-s">79.6%</td>
+																<td class="text-center table__col-s">26:32</td>
+																<td class="text-center table__col-s">23</td>
+															</tr>
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl table__col-xl-fix">Локомотив Кубань
+																</td>
+																<td class="text-center table__col-s">4/10</td>
+																<td class="text-center table__col-s">40%</td>
+																<td class="text-center table__col-s">3/8</td>
+																<td class="text-center table__col-s">39.8%</td>
+																<td class="text-center table__col-s">6/7</td>
+																<td class="text-center table__col-s">79.6%</td>
+																<td class="text-center table__col-s">26:32</td>
+																<td class="text-center table__col-s">23</td>
+															</tr>
 
-									</div> -->
+														</tbody>
+														<tfoot>
+															<tr>
+																<td class="text-left table-footer  table__col-sm-fix"></td>
+																<td class="text-left table-footer table__col-xl table__col-xl-fix"></td>
+																<td class="text-center table-footer table__col-s"></td>
+																<td class="text-center table-footer table__col-s"></td>
+																<td class="text-center table-footer table__col-s"></td>
+																<td class="text-center table-footer table__col-s"></td>
+																<td class="text-center table-footer table__col-s"></td>
+
+															</tr>
+														</tfoot>
+													</table>
+												</div>
+
+
+												<div class="table__box-1">
+													<table class="table-fill-1">
+														<thead>
+															<tr>
+																<th class="text-left table__col-sm-fix">дата</th>
+																<th class="text-left table__col-xl-fix table__col-hide">соперник</th>
+
+															</tr>
+														</thead>
+														<tbody class="table-hover">
+
+															<tr>
+																<td class="text-center table__col-sm-fix">02.03.22</td>
+																<td class="text-left table__col-xl-fix table__col-hide">Локомотив Кубань
+																</td>
+
+															</tr>
+															<tr>
+																<td class="text-center table__col-m-fix">06.03.22</td>
+																<td class="text-left table__col-xl-fix table__col-hide">ЦСКА</td>
+
+															</tr>
+															<tr>
+																<td class="text-center table__col-sm-fix">11.03.22</td>
+																<td class="text-left table__col-xl-fix table__col-hide">Пари Парма</td>
+
+															</tr>
+															<tr>
+																<td class="text-center table__col-m-fix">17.03.22</td>
+																<td class="text-left table__col-xl-fix table__col-hide">Уникс</td>
+
+															</tr>
+															<tr>
+																<td class="text-center table__col-m-fix">24.03.22</td>
+																<td class="text-left table__col-xl-fix table__col-hide">Самара</td>
+
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td class="text-left table-footer  table__col-sm-fix"></td>
+																<td class="text-left table-footer table__col-xl-fix table__col-hide">
+																</td>
+
+															</tr>
+														</tfoot>
+													</table>
+												</div>
+
+
+
+
+
+
+											</div>
+										</div>
+										<button hidden data-showmore-button type="button"
+											class="block__more publication-selector__btn">
+											<span>Показать еще</span>
+											<span>Скрыть</span></button>
+									</div>
 								</div>
 								<div id="tab_3" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карьера</h2>

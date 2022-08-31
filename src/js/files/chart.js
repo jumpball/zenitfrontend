@@ -22,7 +22,7 @@ if ($jsChart1)
 	new Chart($jsChart1, {
 		type: 'doughnut', // Тип графики
 		data: {
-			labels: jsChart1X,
+			//labels: jsChart1X,
 			datasets: [
 				jsChart1Y,
 
@@ -62,7 +62,7 @@ if ($jsChart2)
 	new Chart($jsChart2, {
 		type: 'doughnut', // Тип графики
 		data: {
-			labels: jsChart2X,
+			//labels: jsChart2X,
 			datasets: [
 				jsChart2Y,
 
@@ -102,7 +102,7 @@ if ($jsChart3)
 	new Chart($jsChart3, {
 		type: 'doughnut', // Тип графики
 		data: {
-			labels: jsChart3X,
+			//labels: jsChart3X,
 			datasets: [
 				jsChart3Y,
 
