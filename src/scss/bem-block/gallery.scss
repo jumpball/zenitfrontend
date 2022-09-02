@@ -1,9 +1,6 @@
 .inline-gallery-container {
-	//width: 700px;
-	width: 100%;
-	//height: 500px;
-	@include adaptiveValue("height", 800, 600, 1600, 991.98, 1);
-	//height: rem(900);
+	@include adaptiveValue("width", 1570, 960, 1600, 991.98, 1);
+	@include adaptiveValue("height", 880, 540, 1600, 991.98, 1);
 	position: relative;
 }
 

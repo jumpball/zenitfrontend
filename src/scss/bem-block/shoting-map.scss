@@ -126,10 +126,10 @@
 			@include adaptiveValue("width", 200, 160, 991.98, 767.98, 1);
 		}
 		@media (max-width: $mobile) {
-			@include adaptiveValue("width", 240, 122, 767.98, 410, 1);
+			@include adaptiveValue("width", 239, 120.5, 767.98, 410, 1);
 		}
 		@media (max-width: rem(410)) {
-			@include adaptiveValue("width", 360, 270, 410, 320, 1);
+			@include adaptiveValue("width", 360, 272, 410, 320, 1);
 		}
 	}
 
