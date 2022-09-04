@@ -133,6 +133,26 @@
 		}
 	}
 
+	&__item-1 {
+		position: relative;
+		padding: 5px 8px 5px 8px;
+		background-color: $white;
+		margin-top: rem(20);
+		border-radius: rem(3);
+		//max-height: rem(300);
+		//@include adaptiveValue("width", 900, 600, 1600, 991.98, 1);
+
+		// @media (max-width: $tablet) {
+		// 	@include adaptiveValue("width", 200, 160, 991.98, 767.98, 1);
+		// }
+		// @media (max-width: $mobile) {
+		// 	@include adaptiveValue("width", 239, 120.5, 767.98, 410, 1);
+		// }
+		// @media (max-width: rem(410)) {
+		// 	@include adaptiveValue("width", 360, 272, 410, 320, 1);
+		// }
+	}
+
 	&__info {
 		position: absolute;
 		top: 50%;

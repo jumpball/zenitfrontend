@@ -12,7 +12,7 @@ const jsChart1Y = {
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
 	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'#fec42f',
+		'#c0cb9b',
 		'#ffffff'
 	],// Цвет фона
 	//hoverOffset: 5,
@@ -52,7 +52,7 @@ const jsChart2Y = {
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
 	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'#fec42f',
+		'#ff9191',
 		'#ffffff'
 	],// Цвет фона
 	//hoverOffset: 5,
@@ -92,7 +92,7 @@ const jsChart3Y = {
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
 	borderWidth: 1, // Толщина границ
 	backgroundColor: [
-		'#fec42f',
+		'#ffd28f',
 		'#ffffff'
 	],// Цвет фона
 	//hoverOffset: 5,
@@ -134,43 +134,66 @@ if ($jsChart3)
 // Получение ссылки на элемент canvas в DOM
 const $box = document.querySelector("#box");
 // Tags - это метки, которые идут по оси X.  
-const boxX = ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+const boxX = ["03.04", "08.04", "14.04", "19.04", "22.04"]
 // У нас может быть несколько наборов данных.
 const boxY1 = {
-	label: "% 2-х очковых",
-	data: [55.6, 32.8, 55.6, 0, 35.6, 0, 52.6, 41.8, 20.6, 0, 12.3, 42.8], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
-	backgroundColor: '#ccae61', // Цвет фона
+	label: "2-х",
+	data: [55.6, 32.8, 35.6, 41.8, 20.6], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
+	backgroundColor: '#c0cb9b', // Цвет фона
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
+	//borderColor: '#c0cb9b',
 	borderWidth: 1, // Толщина границ
 };
 const boxY2 = {
-	label: "% 3-х очковых",
-	data: [35.6, 42.8, 35.6, 22.8, 45.6, 23.8, 0, 21.8, 50.6, 30.8, 0, 22.8], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
-	backgroundColor: '#146eb4', // Цвет фона
+	label: "3-х",
+	data: [35.2, 42.8, 32.5, 22.8, 23.8], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
+	backgroundColor: '#ff9191', // Цвет фона
 	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
+	//borderColor: '#ff9191',
+	borderWidth: 1, // Толщина границ
+};
+const boxY3 = {
+	label: "шт",
+	data: [87.2, 66.8, 72.5, 69.5, 77.2], // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.
+	backgroundColor: ' #ffd28f', // Цвет фона
+	borderColor: 'rgba(255, 255, 255, 1)', // Цвет границы
+	//borderColor: '#ffd28f',
 	borderWidth: 1, // Толщина границ
 };
 if ($box)
 	new Chart($box, {
 		type: 'bar', // Тип графики
+		//type: 'line',
 		data: {
 			labels: boxX,
 			datasets: [
 				boxY1,
 				boxY2,
-
-
-
+				boxY3,
 				// Больше данных ...
+		
 			]
 		},
 		options: {
 			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
-					}
-				}],
-			},
+				y: {
+					suggestedMin: 0,
+					suggestedMax: 100,
+					// title: {
+					// 	color: 'black',
+					// 	display: true,
+					// 	text: '%'
+					// }
+				},
+
+				//  x: {
+				// 	title: {
+				// 		color: 'black',
+				// 		display: true,
+				// 		text: 'Динамика'
+				// 	}
+				// }
+			}
 		}
+
 	});
