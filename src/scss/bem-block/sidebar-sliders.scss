@@ -1,0 +1,70 @@
+// === SIDEBAR SLIDERS === //
+
+// === SIDEBAR BANNER === //
+.sidebar-banner-slider {
+	max-height: rem(598);
+	@media (max-width: $tablet) {
+		max-height: none;
+	}
+	// === BOX === //
+	&__box {
+		position: relative;
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+	// === ITEM === //
+	&__item {
+		border: rem(1) solid $color-zenit;
+		border-radius: rem(3);
+		@media (max-width: $tablet) {
+			//border: none;
+		}
+	}
+	// === IMAGE === //
+	&__image {
+		position: relative;
+		padding: 0px 0px 58% 0px;
+		overflow: hidden;
+	}
+
+	&__pagination {
+	}
+
+	&__navigation {
+	}
+
+	&__nav-prev {
+	}
+
+	&__nav-next {
+	}
+}
+
+// === SIDEBAR CALENDAR === //
+.sidebar-calendar-slider {
+	// === BOX === //
+	&__box {
+	}
+	// === WRAPPER === //
+	&__wrapper {
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+	// === ITEM === //
+	&__item {
+	}
+	// === PAGINATION === //
+	&__pagination {
+	}
+	// === NAVIGATION === //
+	&__navigation {
+	}
+	&__nav-prev {
+	}
+	&__nav-next {
+	}
+}

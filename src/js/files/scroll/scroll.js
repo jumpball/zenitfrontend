@@ -117,7 +117,7 @@ export function stickyBlock() {
 			stickyParents.forEach(stickyParent => {
 				let stickyConfig = {
 					media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-					top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
+					top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 90, // === 0 изменил на 90 === //
 					bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
 					header: stickyParent.hasAttribute('data-sticky-header') ? document.querySelector('header.header').offsetHeight : 0
 				}

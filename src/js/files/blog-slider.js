@@ -74,6 +74,57 @@ var swiper = new Swiper('.calendar-slider', {
 	}
 });
 
+// === PUBLICATION SIDEBAR CALENDAR SLIDER === //
+
+var swiper = new Swiper('.sidebar-calendar-slider', {
+	slidesPerView:'auto',
+	spaceBetween: 20,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	//freeMode: true,
+	loop: true,
+	autoplay: {
+		delay: 9000,
+		stopOnLastSlide: false,
+		disableOnInteraction: false,
+	},
+	mousewheel: {
+		invert: false,
+	},
+	//pagination: {
+		//el: '.swiper-pagination',
+		//type: 'bullets',
+		//clickable: true,
+		//dynamicBullets:true,
+		
+	//},
+	navigation: {
+		prevEl: '.team-slider__nav-prev',
+		nextEl: '.team-slider__nav-next',
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+
+		},
+		650: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		880: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		991.98: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+	
+	}
+});
+
 
 // === HEAD SLIDER === //
 
@@ -235,7 +286,69 @@ var swiper = new Swiper('.banner-slider', {
 			spaceBetween: 20,
 			centeredSlides: false,
 		},
-		992: {
+		991.98: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+	}
+});
+
+// === SIDEBAR BANNER SLIDER === //
+
+var swiper = new Swiper('.sidebar-banner-slider', {
+	slidesPerView: 'auto',
+	//slidesPerView: 3,
+	spaceBetween: 20,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	direction: 'vertical',
+	autoplay: {
+		delay: 7000,
+		stopOnLastSlide: false,
+		disableOnInteraction: false,
+	},
+	loop: true,
+	slideToClickedSlide: true,
+	//autoHeight: true,
+	//centeredSlides: true,
+	
+	
+	// effect: 'coverflow',
+	// coverflowEffect: {
+	// rotate: 15,
+	// stretch: 150,
+	// slideShadows: true,
+	// },
+
+	//mousewheel: {
+		//invert: false,
+	//},
+	//pagination: {
+		//el: '.swiper-pagination',
+		//type: 'bullets',
+		//clickable: true,
+		//dynamicBullets:true,
+		
+	//},
+	navigation: {
+		prevEl: '.banner-slider__nav-prev',
+		nextEl: '.banner-slider__nav-next',
+	},
+	breakpoints: {
+		300: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			 direction: 'horizontal',
+			//autoHeight: true,
+		},
+		600: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+         direction: 'horizontal',
+			//autoHeight: true,
+		},
+		991.98: {
 			slidesPerView: 3,
 			spaceBetween: 20,
 		},
